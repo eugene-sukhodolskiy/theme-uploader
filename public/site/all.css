@@ -1,0 +1,124 @@
+.sidebar{
+	position: fixed;
+	width: 20%;
+	color: white;
+	display: inline-block;
+	height: 100%;
+	padding-left: 20px;
+}
+
+.page{
+	width: 78%;
+	margin-left: 22%;
+	display: inline-block;
+	height: 100%;
+	padding-bottom: 200px;
+}
+
+.main-nav{
+	background-color: black;
+	margin-right: 20px;
+}
+
+.main-nav a.item{
+	width: 100%;
+	line-height: 40px;
+	height: 40px;
+	display: block;
+	font-size: 15px;
+	text-align: left;
+	color: inherit;
+	padding-left: 10px;
+	transition-duration: .3s;
+}
+
+.main-nav .count{
+	display: block;
+	position: absolute;
+	left: auto;
+	top: auto;
+	width: 75%;
+	text-align: right;
+}
+
+.main-nav a.item:hover{
+	background-color: #424242;
+}
+
+.form-group label .material-icons{
+	position: relative;
+    top: 7px;
+}
+
+.keyword-item{
+	background-color: #424242;
+	-webkit-border-radius: 15px;
+	        border-radius: 15px;
+	color: white;
+	display: inline-block;
+	padding: 6px 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.keyword-item .material-icons{
+	position: relative;
+    top: 2px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.upload-theme-btn,
+.next-step-btn{
+	position: absolute;
+    left: 50%;
+    width: 160px;
+    margin-left: -80px;
+}
+
+.next-step-btn{
+	width: 200px;
+}
+
+#add-meta{
+	display: none;
+}
+
+.total.right{
+	margin-right: 20px;
+}
+
+.nav-container,
+.cards-container{
+	width: 98%;
+}
+
+.cards-container{
+	vertical-align: top;
+}
+
+.cards-container .col{
+	display: inline-block;
+}
+
+.nav-container .search{
+	margin-right: 20px;
+	width: 200px;
+}
+
+.nav-container .search input:focus{
+	border-color: white !important;
+}
+
+.update-btn{
+	margin-top: 15px;
+}
+
+.add-new-theme{
+	position: fixed;
+	left: 100%;
+	top: 100%;
+	margin: -100px 0 0 -100px;
+	
+}
+

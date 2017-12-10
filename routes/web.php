@@ -13,9 +13,21 @@
 
 Route::get('/meta-browser', 'meta_controller@get_browser');
 
-Route::get('/meta-tech', 'meta_controller@get_tech');
+Route::get('/meta-tech/{cms}', 'meta_controller@get_tech');
 
 Route::get('/meta-file-type', 'meta_controller@get_file_type');
+
+Route::get('/meta-columns', 'meta_controller@get_columns');
+
+Route::get('/meta-layout', 'meta_controller@get_layout');
+
+Route::get('/meta-resolution', 'meta_controller@get_resolution');
+
+Route::get('/meta-compatible/{cms}', 'meta_controller@get_compatible');
+
+Route::get('/meta-cms', 'meta_controller@get_cms');
+
+Route::get('/', 'site@run_site');
 
 // Route::get('/', function () {
 
