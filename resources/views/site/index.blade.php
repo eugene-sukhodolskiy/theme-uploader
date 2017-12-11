@@ -9,6 +9,9 @@
 	<link rel="stylesheet" type="text/css" href="all.css">
 	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+	<script type="text/javascript" src="model.js"></script>
+	<script type="text/javascript" src="view.js"></script>
+	<script type="text/javascript" src="controller.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </head>
 <body class="grey lighten-4">
@@ -16,30 +19,23 @@
 	<aside class="sidebar grey darken-4">
 		<h4>My products</h4>
 		<div class="main-nav">
-			<ul>
-				<li><a href="#" class="item"><span class="count">10</span>Joomla</a></li>
-				<li><a href="#" class="item"><span class="count">7</span>WordPress</a></li>
-				<li><a href="#" class="item"><span class="count">23</span>Drupal</a></li>
-				<li><a href="#" class="item"><span class="count">9</span>Magenta</a></li>
-				<li><a href="#" class="item"><span class="count">15</span>MODX</a></li>
+			<ul class="cms-list">
+				<!-- <li><a href="#" class="item"><span class="count">10</span>Joomla</a></li> -->
 			</ul>
 		</div>
-		<button class="waves-effect waves-light btn red darken-2 white-text upload-theme-btn"><i class="material-icons left">file_upload</i>Upload Theme</button>
+		<button class="waves-effect waves-light btn red darken-2 white-text upload-theme-btn" data-page="addMeta"><i class="material-icons left">file_upload</i>Upload Theme</button>
 	</aside>
 
 	
-	<section class="page" id="add-meta">
+	<section class="page" id="addMeta">
 		<h3>Add new template - step 1</h3>
 		<form method="post">
 			<div class="row">
-				<div class="column col s5">
+				<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
 					<div class="form-group">
 						<label>Select CMS</label>
-						<select name="cms">
-							<option value="1">WordPress</option>
-							<option value="2">Joomla</option>
-							<option value="3">Drupal</option>
-							<option value="4">MODX</option>
+						<select name="cms" class="cms-list-select">
+							<!-- <option value="WordPress">WordPress</option> -->
 						</select>
 					</div>
 
@@ -60,54 +56,25 @@
 					</div>
 				</div>
 
-				<div class="col s5">
+				<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
 					<div class="form-group">
 						<label>Select Resolution</label>
-						<select name="resolution">
-							<option value="pc">PC</option>
-							<option value="tablet">Tablet</option>
-							<option value="mobile">Mobile</option>
-							<option value="na">N/A</option>
+						<select name="resolution" class="resolution">
+							<!-- <option value="id">PC</option> -->
 						</select>
 					</div>
 
 					<div class="form-group">
 						<label>Compatible Browsers</label>
-						<select name="resolution">
-							<option value="ie8">IE 8</option>
-							<option value="ie9">IE 9</option>
-							<option value="ie10">IE 10</option>
-							<option value="edge">Edge</option>
-							<option value="chrome">Chrome</option>
-							<option value="opera">Opera</option>
-							<option value="firefox">Firefox</option>
-							<option value="Safari">Safari</option>
+						<select name="compatible-browsers" class="compatible-browsers">
+							<!-- <option value="id">IE 8</option> -->
 						</select>
 					</div>
 
 					<div class="form-group">
 						<label>Compatible With</label>
-						<select name="compatible">
-							<option value="bootstrap">Bootstrap</option>
-							<option value="angularjs">AngularJS</option>
-							<option value="angularjs2">AngularJS 2</option>
-							<option value="react">React</option>
-							<option value="vue">Vue</option>
-							<option value="boorbon">boorbon</option>
-							<option value="frexgrid">Flexgrid</option>
-						</select>
-					</div>
-
-					<div class="form-group">
-						<label>File Includes</label>
-						<select name="file_type">
-							<option value="PNG">PNG</option>
-							<option value="JPEG">JPEG</option>
-							<option value="PHP">PHP</option>
-							<option value="JS">JS</option>
-							<option value="HTML">HTML</option>
-							<option value="TXT">TXT</option>
-							<option value="PSD">PSD</option>
+						<select name="compatible-with" class="compatible-with">
+							<!-- <option value="id">Bootstrap</option> -->
 						</select>
 					</div>
 
@@ -272,7 +239,7 @@
 			</div>
 		</div>
 
-		<a class="btn-floating btn-large waves-effect waves-light red add-new-theme"><i class="material-icons">add</i></a>
+		<a class="btn-floating btn-large waves-effect waves-light red add-new-theme" data-page="addMeta"><i class="material-icons">add</i></a>
 	</section>
 	
 
