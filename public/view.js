@@ -11,17 +11,6 @@ var View = function(){
 		$('.cms-list').html(html);
 	}
 
-	this.cmsListInSelectRender = function(data){
-		var html = '';
-		for(var i=0; i<data.length; i++){
-			html += '<option value="' + data[i]['meta_value'] + '">' + data[i]['meta_value'] + '</option>';
-		}
-
-		$('.cms-list-select').material_select('destroy');
-		$('.cms-list-select').html(html);
-		$('.cms-list-select').material_select();
-	}
-
 	this.fixAddMetaPageRender = function(){
 		$('body').css('margin-top', '-22px');
 	}

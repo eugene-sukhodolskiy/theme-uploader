@@ -4,7 +4,7 @@ var Controller = function(){
 	this.view = new View();
 
 	this.cmsListAction = function(){
-		self.model.get('/db/cms-list.json', function(data){
+		self.model.get('db/cms-list.json', function(data){
 			self.view.cmsListRender(data);
 			initMainPagination();
 		});
@@ -20,13 +20,14 @@ var Controller = function(){
 	 * [addMetaAction for constroll processes after render page]
 	 */
 	this.addMetaAction = function(){
-		self.model.get('/db/cms-list.json', function(data){
+		self.model.get('', function(data){
 			self.view.cmsListInSelectRender(data);
 		});
 
-		self.listingOnSelect('/db/resolution-list.json', '.resolution');
-		self.listingOnSelect('/db/browser-list.json', '.compatible-browsers');
-		self.listingOnSelect('/db/compatible-with.json', '.compatible-with');
+		self.listingOnSelect('db/cms-list.json', '.cms-list-select');
+		self.listingOnSelect('db/resolution-list.json', '.resolution');
+		self.listingOnSelect('db/browser-list.json', '.compatible-browsers');
+		self.listingOnSelect('db/compatible-with.json', '.compatible-with');
 
 		self.view.fixAddMetaPageRender();
 	}
