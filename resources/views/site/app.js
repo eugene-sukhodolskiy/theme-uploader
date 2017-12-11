@@ -1,8 +1,13 @@
+var controller = new Controller();
+
 $(document).ready(function() {
 
     $('select').material_select();
 
     keywords();
+
+    controller.cmsListAction();
+    initMainPagination();
 
 });
 
@@ -43,4 +48,12 @@ var keywords = function(){
 			});
 		}
 	});
+}
+
+var initMainPagination = function(){
+	 // init paging
+    $('[data-page]').click(function(){
+    	controller.pageAction($(this).attr('data-page'));
+    	return false;
+    });
 }

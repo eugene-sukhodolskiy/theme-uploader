@@ -1,0 +1,26 @@
+[
+	{
+		"mata_name": "cms",
+		"meta_value": "wordpress",
+		"count": "34"
+	},
+
+	{
+		"mata_name": "cms",
+		"meta_value": "joomla",
+		"count": "12"
+	},
+
+	{
+		"mata_name": "cms",
+		"meta_value": "drupal",
+		"count": "5"
+	},
+
+	{
+		"mata_name": "cms",
+		"meta_value": "magento",
+		"count": "9"
+	}
+
+]
