@@ -1,0 +1,44 @@
+[
+	{
+		"id": 1,
+		"mata_name": "browser",
+		"meta_value": "ie 8"
+	},
+
+	{
+		"id": 2,
+		"mata_name": "browser",
+		"meta_value": "ie 9"
+	},
+
+	{
+		"id": 3,
+		"mata_name": "browser",
+		"meta_value": "ie 10"
+	},
+
+	{
+		"id": 4,
+		"mata_name": "browser",
+		"meta_value": "chrome"
+	},
+
+	{
+		"id": 5,
+		"mata_name": "browser",
+		"meta_value": "opera"
+	},
+
+	{
+		"id": 6,
+		"mata_name": "browser",
+		"meta_value": "firefox"
+	},
+
+	{
+		"id": 7,
+		"mata_name": "browser",
+		"meta_value": "safari"
+	}
+
+]
