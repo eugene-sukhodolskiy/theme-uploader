@@ -13,7 +13,7 @@ class meta_controller extends Controller
     }
 
     public function get_tech($cms) {
-    	$tech_list = DB::table('meta')->select('meta_value')->where('meta_cms', $cms)->where('meta_name', 'tech')->get();
+    	$tech_list = DB::table('meta')->select('meta_value', 'id')->where('meta_cms', $cms)->where('meta_name', 'tech')->get();
     	return json_encode($tech_list);
     }
 
@@ -42,5 +42,9 @@ class meta_controller extends Controller
     public function get_cms() {
         $cms_list = DB::table('meta')->select('meta_value')->where('meta_name', 'cms')->get();
         return json_encode($cms_list);
+    }
+    public function get_count_templates($cms) {
+        $count_templates = DB::table('templates')->where('meta_browsers', $cms)->count();
+        return json_encode($count_templates);
     }
 }

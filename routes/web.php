@@ -27,6 +27,8 @@ Route::get('/meta-compatible/{cms}', 'meta_controller@get_compatible');
 
 Route::get('/meta-cms', 'meta_controller@get_cms');
 
+Route::get('/templates-count/{cms}', 'meta_controller@get_count_templates');
+
 Route::get('/', 'site@run_site');
 
 // Route::get('/', function () {
