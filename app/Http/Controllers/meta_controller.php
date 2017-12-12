@@ -31,11 +31,11 @@ class meta_controller extends Controller
         return json_encode($layout_list);
     }
     public function get_resolution() {
-        $resolution_list = DB::table('meta')->select('meta_value')->where('meta_name', 'resolution')->get();
+        $resolution_list = DB::table('meta')->select('meta_value', 'id')->where('meta_name', 'resolution')->get();
         return json_encode($resolution_list);
     }
     public function get_compatible($cms) {
-        $compatible_list = DB::table('meta')->select('meta_value')->where('meta_name', 'compatible')->where('meta_cms', $cms)->get();
+        $compatible_list = DB::table('meta')->select('meta_value', 'id')->where('meta_name', 'compatible')->where('meta_cms', $cms)->get();
         return json_encode($compatible_list);
     }
 

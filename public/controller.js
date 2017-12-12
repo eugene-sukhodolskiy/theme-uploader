@@ -20,14 +20,23 @@ var Controller = function(){
 	 * [addMetaAction for constroll processes after render page]
 	 */
 	this.addMetaAction = function(){
-		self.model.get('', function(data){
-			self.view.cmsListInSelectRender(data);
-		});
+		// self.model.get('', function(data){
+		// 	self.view.cmsListInSelectRender(data);
+		// });
 
 		self.listingOnSelect('meta-cms/', '.cms-list-select');
-		self.listingOnSelect('meta-browser/', '.resolution');
-		self.listingOnSelect('db/browser-list.json', '.compatible-browsers');
-		self.listingOnSelect('db/compatible-with.json', '.compatible-with');
+		$('.cms-list-select').bind('change', function(){
+			self.listingOnSelect('meta-tech/' + getSelectedCms(), '.compatible-with');
+			self.listingOnSelect('meta-compatible/' + getSelectedCms(), '.software');
+		});
+		self.listingOnSelect('meta-resolution/', '.resolution');
+		self.listingOnSelect('meta-browser/', '.compatible-browsers');
+		self.listingOnSelect('meta-file-type/', '.file-type');
+		self.listingOnSelect('meta-columns/', '.column-count');
+		self.listingOnSelect('meta-layout/', '.layout-type');
+
+		self.listingOnSelect('meta-tech/' + getSelectedCms(), '.compatible-with');
+		self.listingOnSelect('meta-compatible/' + getSelectedCms(), '.software');
 
 		self.view.fixAddMetaPageRender();
 	}

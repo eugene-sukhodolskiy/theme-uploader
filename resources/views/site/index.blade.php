@@ -59,53 +59,51 @@
 				<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
 					<div class="form-group">
 						<label>Select Resolution</label>
-						<select name="resolution" class="resolution">
+						<select name="resolution" class="resolution" multiple >
 							<!-- <option value="id">PC</option> -->
 						</select>
 					</div>
 
 					<div class="form-group">
 						<label>Compatible Browsers</label>
-						<select name="compatible-browsers" class="compatible-browsers">
+						<select name="compatible-browsers" class="compatible-browsers" multiple >
 							<!-- <option value="id">IE 8</option> -->
 						</select>
 					</div>
 
 					<div class="form-group">
 						<label>Compatible With</label>
-						<select name="compatible-with" class="compatible-with">
+						<select name="compatible-with" class="compatible-with" multiple >
 							<!-- <option value="id">Bootstrap</option> -->
 						</select>
 					</div>
 
 					<div class="form-group">
+						<label>Software</label>
+						<select name="software" class="software" multiple >
+							<!-- <option value="id">Bootstrap</option> -->
+
+						</select>
+					</div>
+
+					<div class="form-group">
 						<label>File Includes</label>
-						<select name="file_type">
-							<option value="PNG">PNG</option>
-							<option value="JPEG">JPEG</option>
-							<option value="PHP">PHP</option>
-							<option value="JS">JS</option>
-							<option value="HTML">HTML</option>
-							<option value="TXT">TXT</option>
-							<option value="PSD">PSD</option>
+						<select name="file_type" class="file-type" multiple >
+							<!-- <option value="id">PNG</option> -->
 						</select>
 					</div>
 
 					<div class="form-group">
 						<label>Column</label>
-						<select name="column">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
+						<select name="column" class="column-count">
+							<!-- <option value="id">1</option> -->
 						</select>
 					</div>
 
 					<div class="form-group">
 						<label>Layout</label>
-						<select name="layout">
-							<option value="fixed">Fixed</option>
-							<option value="responsive">Responsive</option>
-							<option value="adaptive">Adaptive</option>
+						<select name="layout" class="layout-type">
+							<!-- <option value="id">Fixed</option> -->
 						</select>
 					</div>
 

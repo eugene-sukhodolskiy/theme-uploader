@@ -11,6 +11,10 @@ $(document).ready(function() {
 
 });
 
+var getSelectedCms = function(){
+	return $('select[name="cms"] option[value="' + $('select[name="cms"]').prop('value') + '"]').html();
+}
+
 var keywords = function(){
 	$('[data-keywords-container]').keydown(function(e){
 		if(e.keyCode == 13){
