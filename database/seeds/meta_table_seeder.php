@@ -12,47 +12,47 @@ class meta_table_seeder extends Seeder
     public function run()
     {
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
         	'meta_name' => 'Browser',
         	'meta_value' => 'IE6']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
         	'meta_name' => 'Browser',
         	'meta_value' => 'IE7']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
         	'meta_name' => 'Browser',
         	'meta_value' => 'IE8']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
         	'meta_name' => 'Browser',
         	'meta_value' => 'IE9']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
         	'meta_name' => 'Browser',
         	'meta_value' => 'IE10']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'Browser',
             'meta_value' => 'IE11']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'Browser',
             'meta_value' => 'Firefox']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'Browser',
             'meta_value' => 'Safari']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'Browser',
             'meta_value' => 'Opera']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'Browser',
             'meta_value' => 'Chrome']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'Browser',
             'meta_value' => 'Edge']);
 
@@ -269,98 +269,98 @@ class meta_table_seeder extends Seeder
             'meta_value' => 'Other']);
 
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
         	'meta_name' => 'file_type',
         	'meta_value' => 'Layered PNG']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
         	'meta_name' => 'file_type',
         	'meta_value' => 'Layered PSD']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
         	'meta_name' => 'file_type',
         	'meta_value' => 'PHP files']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
         	'meta_name' => 'file_type',
         	'meta_value' => 'Ecwid CSS Files']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
         	'meta_name' => 'file_type',
         	'meta_value' => 'Muse File']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'file_type',
             'meta_value' => 'HBS Files']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'file_type',
             'meta_value' => 'HTML Files']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'file_type',
             'meta_value' => 'CSS Files']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'file_type',
             'meta_value' => 'JS Files']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'file_type',
             'meta_value' => 'PSD']);
 
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'columns',
             'meta_value' => '1']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'columns',
             'meta_value' => '2']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'columns',
             'meta_value' => '3']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'columns',
             'meta_value' => '4']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'columns',
             'meta_value' => 'n/a']);
 
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'layout',
             'meta_value' => 'Fixed']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'layout',
             'meta_value' => 'Liquid']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'layout',
             'meta_value' => 'Responsive']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'layout',
             'meta_value' => 'n/a']);
 
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'resolution',
             'meta_value' => 'Pc']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'resolution',
             'meta_value' => 'Tablet']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'resolution',
             'meta_value' => 'Mobile']);
         DB::table('meta')->insert([
-            'meta_cms' => 'WordPress',
+            'meta_cms' => '',
             'meta_name' => 'resolution',
             'meta_value' => 'n/a']);
 
@@ -867,50 +867,6 @@ class meta_table_seeder extends Seeder
 
         //Joomla
 
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Firefox']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Safari']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Chrome']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Edge']);
 
         DB::table('meta')->insert([
             'meta_cms' => 'Joomla',
@@ -1027,97 +983,6 @@ class meta_table_seeder extends Seeder
 
         DB::table('meta')->insert([
             'meta_cms' => 'Joomla',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => '4+',
-            'meta_value' => 'n/a']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'lyaout',
-            'meta_value' => 'n/a']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => '4+',
-            'meta_value' => 'Mobile']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
-            'meta_name' => '4+',
-            'meta_value' => 'n/a']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Joomla',
             'meta_name' => 'compatible',
             'meta_value' => 'Ecwid']);
         DB::table('meta')->insert([
@@ -1225,51 +1090,6 @@ class meta_table_seeder extends Seeder
 
         DB::table('meta')->insert([
             'meta_cms' => 'Drupal',
-            'meta_name' => 'Browsers',
-            'meta_value' => 'IE6']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'Browsers',
-            'meta_value' => 'IE7']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'Browsers',
-            'meta_value' => 'IE8']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'Browsers',
-            'meta_value' => 'IE9']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'Browsers',
-            'meta_value' => 'IE10']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'Browsers',
-            'meta_value' => 'IE11']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'Browsers',
-            'meta_value' => 'Firefox']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'Browsers',
-            'meta_value' => 'Safari']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'Browsers',
-            'meta_value' => 'Opera']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'Browsers',
-            'meta_value' => 'Chrome']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'Browsers',
-            'meta_value' => 'Edge']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
             'meta_name' => 'tech',
             'meta_value' => 'Drupal 8.2.x']);
         DB::table('meta')->insert([
@@ -1312,103 +1132,6 @@ class meta_table_seeder extends Seeder
             'meta_cms' => 'Drupal',
             'meta_name' => 'tech',
             'meta_value' => 'Other']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'file_type',
-            'meta_value' => 'n/a']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Mobile']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Drupal',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
 
         DB::table('meta')->insert([
             'meta_cms' => 'Drupal',
@@ -1487,51 +1210,6 @@ class meta_table_seeder extends Seeder
 
         DB::table('meta')->insert([
             'meta_cms' => 'Concrete',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Firefox']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Safari']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Chrome']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Edge']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
             'meta_name' => 'tech',
             'meta_value' => 'Concrete5 5.7.x']);
         DB::table('meta')->insert([
@@ -1546,98 +1224,6 @@ class meta_table_seeder extends Seeder
             'meta_cms' => 'Concrete',
             'meta_name' => 'tech',
             'meta_value' => 'Other']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Mobile']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Concrete',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
 
         DB::table('meta')->insert([
             'meta_cms' => 'Concrete',
@@ -1712,51 +1298,6 @@ class meta_table_seeder extends Seeder
 
         DB::table('meta')->insert([
             'meta_cms' => 'Muse',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Firefox']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Safari']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Chrome']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Edge']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
             'meta_name' => 'tech',
             'meta_value' => 'Muse CC 2018.0.x']);
         DB::table('meta')->insert([
@@ -1787,98 +1328,6 @@ class meta_table_seeder extends Seeder
             'meta_cms' => 'Muse',
             'meta_name' => 'tech',
             'meta_value' => 'Other']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-        DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Mobile']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Muse',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
 
             DB::table('meta')->insert([
             'meta_cms' => 'Muse',
@@ -1949,51 +1398,6 @@ class meta_table_seeder extends Seeder
 
             DB::table('meta')->insert([
             'meta_cms' => 'Mura',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Firefox']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Safari']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Chrome']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Edge']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
             'meta_name' => 'tech',
             'meta_value' => 'Mura 6.1.x']);
             DB::table('meta')->insert([
@@ -2004,98 +1408,6 @@ class meta_table_seeder extends Seeder
             'meta_cms' => 'Mura',
             'meta_name' => 'tech',
             'meta_value' => 'Other']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Mobile']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Mura',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
 
             DB::table('meta')->insert([
             'meta_cms' => 'Mura',
@@ -2163,144 +1475,6 @@ class meta_table_seeder extends Seeder
             'meta_value' => 'Foundation 4']);
 
             //HTML
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Firefox']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Safari']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Chrome']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Edge']);
-
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Mobile']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'HTML',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
 
             DB::table('meta')->insert([
             'meta_cms' => 'HTML',
@@ -2384,31 +1558,6 @@ class meta_table_seeder extends Seeder
 
             DB::table('meta')->insert([
             'meta_cms' => 'OpenCart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
             'meta_name' => 'tech',
             'meta_value' => 'OpenCart 3.0.2.x']);
             DB::table('meta')->insert([
@@ -2471,98 +1620,6 @@ class meta_table_seeder extends Seeder
             'meta_cms' => 'OpenCart',
             'meta_name' => 'tech',
             'meta_value' => 'Other']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-           DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Mobile']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'OpenCart',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
 
             DB::table('meta')->insert([
             'meta_cms' => 'OpenCart',
@@ -2641,51 +1698,6 @@ class meta_table_seeder extends Seeder
 
             DB::table('meta')->insert([
             'meta_cms' => 'Oscommerece',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Firefox']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Safari']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Chrome']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Edge']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
             'meta_name' => 'tech',
             'meta_value' => 'osCommerce 3.0.2']);
             DB::table('meta')->insert([
@@ -2700,98 +1712,6 @@ class meta_table_seeder extends Seeder
             'meta_cms' => 'Oscommerece',
             'meta_name' => 'tech',
             'meta_value' => 'Other']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Mobile']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Oscommerece',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
 
             DB::table('meta')->insert([
             'meta_cms' => 'Oscommerece',
@@ -2866,51 +1786,6 @@ class meta_table_seeder extends Seeder
 
             DB::table('meta')->insert([
             'meta_cms' => 'Prestashop',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Firefox']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Safari']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Chrome']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Edge']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
             'meta_name' => 'tech',
             'meta_value' => 'PrestaShop 1.7.2.x']);
             DB::table('meta')->insert([
@@ -2977,98 +1852,6 @@ class meta_table_seeder extends Seeder
             'meta_cms' => 'Prestashop',
             'meta_name' => 'tech',
             'meta_value' => 'Other']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP FIles']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Mobile']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Prestashop',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
 
             DB::table('meta')->insert([
             'meta_cms' => 'Prestashop',
@@ -3147,152 +1930,12 @@ class meta_table_seeder extends Seeder
 
             DB::table('meta')->insert([
             'meta_cms' => 'Shopify',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Firefox']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Safari']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Chrome']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Edge']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
             'meta_name' => 'tech',
             'meta_value' => 'Shopify 2.x']);
             DB::table('meta')->insert([
             'meta_cms' => 'Shopify',
             'meta_name' => 'tech',
             'meta_value' => 'Other']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Mobile']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Shopify',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
 
             DB::table('meta')->insert([
             'meta_cms' => 'Shopify',
@@ -3371,149 +2014,12 @@ class meta_table_seeder extends Seeder
 
             DB::table('meta')->insert([
             'meta_cms' => 'BigCommerce',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Firefox']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Safari']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Chrome']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Edge']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
             'meta_name' => 'tech',
             'meta_value' => 'BigCommerce Stencil 1.x']);
             DB::table('meta')->insert([
             'meta_cms' => 'BigCommerce',
             'meta_name' => 'tech',
             'meta_value' => 'Other']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Mobile']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'BigCommerce',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
 
             DB::table('meta')->insert([
             'meta_cms' => 'BigCommerce',
@@ -3592,51 +2098,6 @@ class meta_table_seeder extends Seeder
 
             DB::table('meta')->insert([
             'meta_cms' => 'Zen Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Firefox']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Safari']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Chrome']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Edge']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
             'meta_name' => 'tech',
             'meta_value' => 'Zen Cart 1.5.x']);
             DB::table('meta')->insert([
@@ -3651,98 +2112,6 @@ class meta_table_seeder extends Seeder
             'meta_cms' => 'Zen Cart',
             'meta_name' => 'tech',
             'meta_value' => 'Other']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Mobile']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Zen Cart',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
 
             DB::table('meta')->insert([
             'meta_cms' => 'Zen Cart',
@@ -3818,51 +2187,6 @@ class meta_table_seeder extends Seeder
             'meta_value' => 'Foundation 4']);
 
             //Magento
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Firefox']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Safari']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Chrome']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Edge']);
 
             DB::table('meta')->insert([
             'meta_cms' => 'Magento',
@@ -4043,98 +2367,6 @@ class meta_table_seeder extends Seeder
 
             DB::table('meta')->insert([
             'meta_cms' => 'Magento',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Mobile']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Magento',
             'meta_name' => 'compatible',
             'meta_value' => 'Magento Enterprice']);
             DB::table('meta')->insert([
@@ -4198,51 +2430,6 @@ class meta_table_seeder extends Seeder
 
             DB::table('meta')->insert([
             'meta_cms' => 'MODX',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Firefox']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Safari']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Chrome']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Edge']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
             'meta_name' => 'tech',
             'meta_value' => 'MODX Revolution 2.4.x']);
             DB::table('meta')->insert([
@@ -4261,98 +2448,6 @@ class meta_table_seeder extends Seeder
             'meta_cms' => 'MODX',
             'meta_name' => 'tech',
             'meta_value' => 'Other']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Mobile']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'MODX',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
 
             DB::table('meta')->insert([
             'meta_cms' => 'MODX',
@@ -4435,51 +2530,6 @@ class meta_table_seeder extends Seeder
 
             DB::table('meta')->insert([
             'meta_cms' => 'CS-Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Firefox']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Safari']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Chrome']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Edge']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
             'meta_name' => 'tech',
             'meta_value' => 'CS-Cart 4.6.x']);
             DB::table('meta')->insert([
@@ -4526,98 +2576,6 @@ class meta_table_seeder extends Seeder
             'meta_cms' => 'CS-Cart',
             'meta_name' => 'tech',
             'meta_value' => 'Other']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Mobile']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'CS-Cart',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
 
             DB::table('meta')->insert([
             'meta_cms' => 'CS-Cart',
@@ -4689,51 +2647,6 @@ class meta_table_seeder extends Seeder
             'meta_value' => 'Foundation 4']);
 
             //Ghost
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Firefox']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Safari']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Chrome']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Edge']);
 
             DB::table('meta')->insert([
             'meta_cms' => 'Ghost',
@@ -4838,98 +2751,6 @@ class meta_table_seeder extends Seeder
 
             DB::table('meta')->insert([
             'meta_cms' => 'Ghost',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Moblie']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Ghost',
             'meta_name' => 'compatible',
             'meta_value' => 'Ecwid']);
             DB::table('meta')->insert([
@@ -4994,143 +2815,6 @@ class meta_table_seeder extends Seeder
             'meta_value' => 'Foundation 4']);
 
             //Landing pages
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE6']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE7']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE8']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE9']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE10']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'Browser',
-            'meta_value' => 'IE11']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Firefox']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Safari']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Opera']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Chrome']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'Browser',
-            'meta_value' => 'Edge']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Moblie']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Landing pages',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
 
             DB::table('meta')->insert([
             'meta_cms' => 'Landing pages',
@@ -5210,98 +2894,6 @@ class meta_table_seeder extends Seeder
             'meta_value' => 'Foundation 4']);
 
             //Email templates
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PNG']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Layered PSD']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'file_type',
-            'meta_value' => 'PHP Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Ecwid CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'file_type',
-            'meta_value' => 'Muse File']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HBS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'file_type',
-            'meta_value' => 'HTML Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'file_type',
-            'meta_value' => 'CSS Files']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'file_type',
-            'meta_value' => 'JS Files']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'columns',
-            'meta_value' => '1']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'columns',
-            'meta_value' => '2']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'columns',
-            'meta_value' => '3']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'columns',
-            'meta_value' => '4+']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'columns',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'layout',
-            'meta_value' => 'Fixed']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'layout',
-            'meta_value' => 'Liquid']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'layout',
-            'meta_value' => 'Responsive']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'layout',
-            'meta_value' => 'n/a']);
-
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Pc']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Tablet']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'resolution',
-            'meta_value' => 'Moblie']);
-            DB::table('meta')->insert([
-            'meta_cms' => 'Email templates',
-            'meta_name' => 'resolution',
-            'meta_value' => 'n/a']);
 
             DB::table('meta')->insert([
             'meta_cms' => 'Email templates',
