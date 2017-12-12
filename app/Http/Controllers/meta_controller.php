@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class meta_controller extends Controller
 {
     public function get_browser() {
-    	$browser_list = DB::table('meta')->select('meta_value')->where('meta_name', 'Browser')->get();
+    	$browser_list = DB::table('meta')->select('meta_value', 'id')->where('meta_name', 'Browser')->get();
     	return json_encode($browser_list);
     }
 
@@ -18,7 +18,7 @@ class meta_controller extends Controller
     }
 
     public function get_file_type() {
-    	$file_type_list = DB::table('meta')->select('meta_value')->where('meta_name', 'file_type')->get();
+    	$file_type_list = DB::table('meta')->select('meta_value', 'id')->where('meta_name', 'file_type')->get();
     	return json_encode($file_type_list);
     }
 
@@ -40,11 +40,24 @@ class meta_controller extends Controller
     }
 
     public function get_cms() {
-        $cms_list = DB::table('meta')->select('meta_value')->where('meta_name', 'cms')->get();
-        return json_encode($cms_list);
-    }
-    public function get_count_templates($cms) {
-        $count_templates = DB::table('templates')->where('meta_browsers', $cms)->count();
-        return json_encode($count_templates);
+        function get_count_templates($cms_id) {
+            $count_templates = DB::table('templates')->where('meta_cms', $cms_id)->count();
+            return $count_templates;
+        }
+
+        $cms_list = DB::table('meta')->select('meta_value', 'id')->where('meta_name', 'cms')->get();
+        // $cms_list = json_encode($cms_list);
+        // $cms_list = json_decode($cms_list, false);
+        $cms_list = (array)$cms_list;
+        $result;
+        foreach($cms_list as $key => $val){
+            $result = $val;
+        }
+        foreach($result as $inx => $item){
+            $result[$inx] = (array)$result[$inx];
+            $result[$inx]['count'] = get_count_templates($result[$inx]['id']);
+        }
+        
+        return json_encode($result);
     }
 }

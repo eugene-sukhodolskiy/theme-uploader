@@ -22,8 +22,8 @@
 
 .main-nav a.item{
 	width: 100%;
-	line-height: 40px;
-	height: 40px;
+	line-height: 20px;
+    height: 20px;
 	display: block;
 	font-size: 15px;
 	text-align: left;

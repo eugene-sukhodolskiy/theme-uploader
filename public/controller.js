@@ -4,7 +4,7 @@ var Controller = function(){
 	this.view = new View();
 
 	this.cmsListAction = function(){
-		self.model.get('db/cms-list.json', function(data){
+		self.model.get('meta-cms/', function(data){
 			self.view.cmsListRender(data);
 			initMainPagination();
 		});
@@ -24,8 +24,8 @@ var Controller = function(){
 			self.view.cmsListInSelectRender(data);
 		});
 
-		self.listingOnSelect('db/cms-list.json', '.cms-list-select');
-		self.listingOnSelect('db/resolution-list.json', '.resolution');
+		self.listingOnSelect('meta-cms/', '.cms-list-select');
+		self.listingOnSelect('meta-browser/', '.resolution');
 		self.listingOnSelect('db/browser-list.json', '.compatible-browsers');
 		self.listingOnSelect('db/compatible-with.json', '.compatible-with');
 
