@@ -27,9 +27,17 @@ var View = function(){
 	this.listingOnSelectRender = function(data, container){
 		var html = '';
 		for(var i=0; i<data.length; i++){
-			html += '<option value="' + data[i]['id'] + '">' + data[i]['meta_value'] + '</option>';
+			if(typeof data[i]['id'] != 'undefined'){
+				html += '<option value="' + data[i]['id'] + '">' + data[i]['meta_value'] + '</option>';
+			}else{
+				html += '<option value="' + data[i]['meta_value'] + '">' + data[i]['meta_value'] + '</option>';
+			}
 		}
 
+		// console.log($(container).attr('multiple'));
+		// if($(container).attr('multiple') == 'multiple'){
+		// 	$(container).prepend('<option value="defalut" disabled selected>Choose your option</option>');
+		// }
 		$(container).material_select('destroy');
 		$(container).html(html);
 		$(container).material_select();

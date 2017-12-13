@@ -13,5 +13,19 @@ var Model = function(){
 		}
 	}
 
+	this.send = function(data, callback, fail){
+		$.ajax({
+
+		  method: "POST",
+		  url: "upload-template/",
+		  data: JSON.stringify(data)
+
+		}).done(function() {
+		    callback();
+		}).fail(function(){
+			fail();
+		});
+	}
+
 
 }

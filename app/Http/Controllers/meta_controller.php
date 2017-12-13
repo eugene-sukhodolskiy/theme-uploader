@@ -23,11 +23,11 @@ class meta_controller extends Controller
     }
 
     public function get_columns() {
-        $colums_list = DB::table('meta')->select('meta_value')->where('meta_name', 'columns')->get();
+        $colums_list = DB::table('meta')->select('meta_value', 'id')->where('meta_name', 'columns')->get();
         return json_encode($colums_list);
     }
     public function get_layout() {
-        $layout_list = DB::table('meta')->select('meta_value')->where('meta_name', 'layout')->get();
+        $layout_list = DB::table('meta')->select('meta_value', 'id')->where('meta_name', 'layout')->get();
         return json_encode($layout_list);
     }
     public function get_resolution() {

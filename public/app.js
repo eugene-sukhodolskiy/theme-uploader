@@ -1,4 +1,6 @@
 var controller = new Controller();
+var ZIP; // theme file
+var THUMBNAILS = [];
 
 $(document).ready(function() {
 
@@ -7,7 +9,6 @@ $(document).ready(function() {
     keywords();
 
     controller.cmsListAction();
-    initMainPagination();
 
 });
 
@@ -60,4 +61,70 @@ var initMainPagination = function(){
     	controller.pageAction($(this).attr('data-page'));
     	return false;
     });
+}
+
+var loadImgAndZipFile = function(file){
+	var filename = file.name.split('.');
+	var format = filename[filename.length - 1];
+	if(format == 'zip' || format == 'ZIP'){
+		//console.log(file);
+		// Adding to theme file list
+		var reader = new FileReader();
+		reader.onload = function(e){
+			var dataUri = e.target.result;
+			console.log(file.name);
+			$('.zip-title').html(file.name);
+			$('.zip-icon .material-icons').css('display', 'inline-block');
+			$('.send-and-upload').css('display', 'inline-block');
+			ZIP = dataUri;
+		}
+		reader.readAsDataURL(file);
+
+	}else if(format == 'png' || format == 'PNG' || format == 'jpg' || format == 'JPG' || format == 'jpeg' || format == 'JPEG'){
+		//console.log(file);
+		// Adding to thumbnail list
+		var reader = new FileReader();
+		reader.onload = function(e){
+			var dataUri = e.target.result;
+			var img = new Image();
+			img.src = dataUri;
+			img.onload = function(){
+				$('.thumbnail-container').append('<div class="thumb-wrap"></div>');
+				var lastWrap = $('.thumbnail-container .thumb-wrap:last-of-type');
+				$(lastWrap).append('<i class="material-icons remove-uploaded-img">clear</i>');
+				$(lastWrap).append(img);
+				$(lastWrap).find('.remove-uploaded-img').click(function(){
+					$(this).parent().remove();
+				});
+				controller.addDragAndDropEventThumbnail(lastWrap);
+			}
+			$(img).addClass('thumbnail-item');
+			$(img).attr('data-filename', file.name);
+			var countThumbs = $('.thumbnail-container .thumbnail-item').length;
+			$(img).attr('data-index', countThumbs);
+			THUMBNAILS.push(dataUri);
+		}
+		reader.onerror = function(e) {
+		    console.error("Файл не может быть прочитан! код " + e.target.error.code);
+		};
+
+		reader.readAsDataURL(file);
+		
+	}else{
+		console.log('That file not zip');
+	}
+}
+
+var getMultipleSelectValue = function(select){
+	var materialSelect = $('#' + 'select-options-' + $(select).attr('data-select-id'));
+	var materialItems = $(materialSelect).find('li');
+	var selectItems = $(select).find('option');
+	var res = [];
+	for(var i=0;i<materialItems.length;i++){
+		if($(materialItems[i]).hasClass('active')){
+			res.push($(selectItems[i]).attr('value'));
+		}
+	}
+
+	return res.length ? res : false;
 }

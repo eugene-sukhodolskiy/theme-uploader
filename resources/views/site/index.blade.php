@@ -41,7 +41,7 @@
 
 					<div class="input-field">
 						<label for="template_name">Template name *</label>
-						<input type="text" id="template_name" name="name">
+						<input type="text" id="template_name" name="template_name">
 					</div>
 
 					<div class="input-field">
@@ -59,28 +59,28 @@
 				<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
 					<div class="form-group">
 						<label>Select Resolution</label>
-						<select name="resolution" class="resolution" multiple >
+						<select name="resolution" class="resolution" multiple="multiple" >
 							<!-- <option value="id">PC</option> -->
 						</select>
 					</div>
 
 					<div class="form-group">
 						<label>Compatible Browsers</label>
-						<select name="compatible-browsers" class="compatible-browsers" multiple >
+						<select name="compatible-browsers" class="compatible-browsers" multiple="multiple" >
 							<!-- <option value="id">IE 8</option> -->
 						</select>
 					</div>
 
 					<div class="form-group">
 						<label>Compatible With</label>
-						<select name="compatible-with" class="compatible-with" multiple >
+						<select name="compatible-with" class="compatible-with" multiple="multiple" >
 							<!-- <option value="id">Bootstrap</option> -->
 						</select>
 					</div>
 
 					<div class="form-group">
 						<label>Software</label>
-						<select name="software" class="software" multiple >
+						<select name="software" class="software" multiple="multiple" >
 							<!-- <option value="id">Bootstrap</option> -->
 
 						</select>
@@ -88,7 +88,7 @@
 
 					<div class="form-group">
 						<label>File Includes</label>
-						<select name="file_type" class="file-type" multiple >
+						<select name="file_type" class="file-type" multiple="multiple" >
 							<!-- <option value="id">PNG</option> -->
 						</select>
 					</div>
@@ -110,7 +110,7 @@
 				</div>
 			</div>
 		</form>
-		<button class="waves-effect waves-light btn  teal lighten-1 white-text next-step-btn"><i class="material-icons right">arrow_forward</i>Next step</button>
+		<button class="waves-effect waves-light btn  teal lighten-1 white-text next-step-btn" data-page="uploadTheme"><i class="material-icons right">arrow_forward</i>Next step</button>
 	</section>
 
 	<section class="page" id="theme-list">
@@ -238,6 +238,38 @@
 		</div>
 
 		<a class="btn-floating btn-large waves-effect waves-light red add-new-theme" data-page="addMeta"><i class="material-icons">add</i></a>
+	</section>
+
+	<section class="page" id="uploadTheme">
+		<div class="row">
+        <div class="col s12 m12 l12 xl12">
+          <div class="card">
+            <div class="card-image">
+              <div class="drag-and-upload">
+              	<input type="file" class="file-field" name="theme-archive" multiple="multiple"="multiple="multiple"">
+              	<i class="material-icons file-select-clicker">cloud_upload</i>
+              </div>
+              <span class="card-title grey-text darken-4">Drag and Drop for upload theme archive. Warning! Only <strong>ZIP</strong> files</span>
+            </div>
+            <div class="card-content">
+              <div class="thumbnail-container drag-and-order">
+              	
+              </div>
+            </div>
+            <div class="card-action">
+              <div class="row">
+              	<div class="col-xs-4 col-sm-2 col-md-1 col-lg-1 zip-icon">
+              		<i class="material-icons">archive</i>
+              	</div>
+              	<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 zip-title"></div>
+              	<div class="col-xs-4 col-sm-6 col-md-9 col-lg-9 send-and-upload">
+              		<button class="btn waves-effect waves-light green darken-1 uploadToServ">Upload</button>
+              	</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 	</section>
 	
 
