@@ -16,9 +16,8 @@ class CreateTemplatesTable extends Migration
         Schema::create('templates', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('meta_cms')->unsigned();
-            //$table->foreign('meta_cms')->referenses('id')->on('meta');
-            $table->longText('preview');
             $table->dateTime('date_at_create');
+            $table->dateTime('date_of_update');
             $table->string('link_on_demo');
             $table->string('name');
             $table->text('meta_browsers');
@@ -28,7 +27,6 @@ class CreateTemplatesTable extends Migration
             $table->integer('meta_layout');
             $table->text('description');
             $table->integer('keyword_id')->unsigned();
-            //$table->foreign('keyword_id')->referenses('id')->on('keywords');
         });
     }
 

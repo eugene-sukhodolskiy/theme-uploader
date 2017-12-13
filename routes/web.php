@@ -31,6 +31,8 @@ Route::get('/templates-count/{cms}', 'meta_controller@get_count_templates');
 
 Route::get('/', 'site@run_site');
 
+Route::get('/upload-template', 'template_controller@upload');
+
 // Route::get('/', function () {
 
 // 	$tasks = DB::table('meta')->get();
