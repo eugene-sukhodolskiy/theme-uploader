@@ -94,6 +94,12 @@ var loadImgAndZipFile = function(file){
 				$(lastWrap).append('<i class="material-icons remove-uploaded-img">clear</i>');
 				$(lastWrap).append(img);
 				$(lastWrap).find('.remove-uploaded-img').click(function(){
+					$(this).parent().addClass('rem-flag');
+					$('.thumbnail-container .thumb-wrap').each(function(inx){
+						if($(this).hasClass('rem-flag')){
+							THUMBNAILS.splice(inx, 1);
+						}
+					});
 					$(this).parent().remove();
 				});
 				controller.addDragAndDropEventThumbnail(lastWrap);

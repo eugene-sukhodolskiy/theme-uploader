@@ -113,10 +113,10 @@ var Controller = function(){
 
 	this.sendDataToServ = function(){
 		self.model.send(self.collectDataForSending(), function(){
-			//alert('Well done');
+			alert('Well done');
 			console.log('Well done');
 			//self.cmsListAction();
-			document.location.reload();
+			document.location = document.location;
 		}, function(){
 			alert('Error sending');
 		});
