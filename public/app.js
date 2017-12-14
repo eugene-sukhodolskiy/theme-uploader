@@ -58,7 +58,7 @@ var keywords = function(){
 var initMainPagination = function(){
 	 // init paging
     $('[data-page]').click(function(){
-    	controller.pageAction($(this).attr('data-page'));
+    	controller.pageAction($(this).attr('data-page'), this);
     	return false;
     });
 }

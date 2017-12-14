@@ -13,6 +13,12 @@
 
 Route::get('/meta-browser', 'meta_controller@get_browser');
 
+Route::get('/test', function(){
+	return '<form method="post" action="./upload-template"><textarea name="data" id="" cols="30" rows="10"></textarea><button>send</button></form>';
+});
+
+// Route::post('auth/register', 'Auth\AuthController@postRegister');
+
 Route::get('/meta-tech/{cms}', 'meta_controller@get_tech');
 
 Route::get('/meta-file-type', 'meta_controller@get_file_type');
@@ -29,9 +35,12 @@ Route::get('/meta-cms', 'meta_controller@get_cms');
 
 Route::get('/templates-count/{cms}', 'meta_controller@get_count_templates');
 
+Route::get('/template-list/{cms_id}', 'template_controller@templateList');
+
 Route::get('/', 'site@run_site');
 
-Route::get('/upload-template', 'template_controller@upload');
+// Route::get('/upload-template', 'template_controller@upload');
+Route::patch('/upload-template', 'template_controller@upload');
 
 // Route::get('/', function () {
 

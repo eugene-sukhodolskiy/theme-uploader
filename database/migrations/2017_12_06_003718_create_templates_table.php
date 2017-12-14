@@ -26,7 +26,6 @@ class CreateTemplatesTable extends Migration
             $table->integer('count_column');
             $table->integer('meta_layout');
             $table->text('description');
-            $table->integer('keyword_id')->unsigned();
         });
     }
 

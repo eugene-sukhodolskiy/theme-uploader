@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class site extends Controller
 {
     public function run_site() {
-    	return view('site/index');
+    	return view('site/index', ['token' => app('session') -> token()]);
     }
 }

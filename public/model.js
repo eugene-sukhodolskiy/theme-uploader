@@ -14,15 +14,26 @@ var Model = function(){
 	}
 
 	this.send = function(data, callback, fail){
+
+		// $.ajaxSetup({
+		//     headers: {
+		//         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+		//         'X-XSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+		//         'X-Requested-With': 'XMLHttpRequest'
+		//     }
+		// });
 		$.ajax({
 
-		  method: "POST",
+		  method: "PATCH",
 		  url: "upload-template/",
-		  data: JSON.stringify(data)
+		  dataType: 'json',
+		  data: {'data' : JSON.stringify(data), '_token' : TOKEN}
 
-		}).done(function() {
+		}).done(function(msg) {
+			console.log(msg);
 		    callback();
-		}).fail(function(){
+		}).fail(function(msg){
+			console.log(msg);
 			fail();
 		});
 	}

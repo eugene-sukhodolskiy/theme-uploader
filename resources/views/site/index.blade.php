@@ -7,6 +7,10 @@
 	<link rel="stylesheet" type="text/css" href="flexboxgrid.min.css">
 	<link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="all.css">
+	<script type="text/javascript">
+		var TOKEN = "{{$token}}"
+	</script>
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 	<script type="text/javascript" src="model.js"></script>
@@ -113,7 +117,7 @@
 		<button class="waves-effect waves-light btn  teal lighten-1 white-text next-step-btn" data-page="uploadTheme"><i class="material-icons right">arrow_forward</i>Next step</button>
 	</section>
 
-	<section class="page" id="theme-list">
+	<section class="page" id="themeList">
 		<div class="row">
 			<nav class="grey darken-2 nav-container">
 			    <div class="nav-wrapper">
@@ -130,111 +134,27 @@
 		</div>
 
 		<div class="row">
-			<h5 class="total right">Total 6</h5>
+			<h5 class="total right">Total <span>6</span></h5>
 		</div>
 
 		<div class="row cards-container">
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 card-for-clone" style="display: none">
 				<div class="card">
 				    <div class="card-image waves-effect waves-block waves-light">
 				      <img class="activator" src="images/thumbnail-1.jpg">
 				    </div>
 				    <div class="card-content">
-				      <span class="card-title activator grey-text text-darken-4">Theme title<i class="material-icons right">more_vert</i></span>
-				      <p><a href="#">Link on demo</a></p>
+				      <span class="card-title activator grey-text text-darken-4"><span class="c-title">Theme title</span><i class="material-icons right">more_vert</i></span>
+				      <p><a class="link-on-demo" href="#">Link on demo</a></p>
 				    </div>
 				    <div class="card-reveal">
-				      <span class="card-title grey-text text-darken-4">Theme title<i class="material-icons right">close</i></span>
-				      <p>Theme description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quidem saepe doloremque repellat minima quod totam, ducimus maiores vero neque?</p>
-				      <a class="waves-effect waves-light btn-flat update-btn blue-text">Update</a>
+				      <span class="card-title grey-text text-darken-4"><span class="c-title">Theme title</span><i class="material-icons right">close</i></span>
+				      <p class="description">Theme description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quidem saepe doloremque repellat minima quod totam, ducimus maiores vero neque?</p>
+				      <a class="waves-effect waves-light btn-flat update-btn blue-text upldate-template-btn">Update</a>
 				    </div>
 				</div>
 			</div>
 
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-				<div class="card">
-				    <div class="card-image waves-effect waves-block waves-light">
-				      <img class="activator" src="images/thumbnail-2.jpg">
-				    </div>
-				    <div class="card-content">
-				      <span class="card-title activator grey-text text-darken-4">Theme title<i class="material-icons right">more_vert</i></span>
-				      <p><a href="#">Link on demo</a></p>
-				    </div>
-				    <div class="card-reveal">
-				      <span class="card-title grey-text text-darken-4">Theme title<i class="material-icons right">close</i></span>
-				      <p>Theme description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quidem saepe doloremque repellat minima quod totam, ducimus maiores vero neque?</p>
-				      <a class="waves-effect waves-light btn-flat update-btn blue-text">Update</a>
-				    </div>
-				</div>
-			</div>
-
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-				<div class="card">
-				    <div class="card-image waves-effect waves-block waves-light">
-				      <img class="activator" src="images/thumbnail-3.jpg">
-				    </div>
-				    <div class="card-content">
-				      <span class="card-title activator grey-text text-darken-4">Theme title<i class="material-icons right">more_vert</i></span>
-				      <p><a href="#">Link on demo</a></p>
-				    </div>
-				    <div class="card-reveal">
-				      <span class="card-title grey-text text-darken-4">Theme title<i class="material-icons right">close</i></span>
-				      <p>Theme description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quidem saepe doloremque repellat minima quod totam, ducimus maiores vero neque?</p>
-				      <a class="waves-effect waves-light btn-flat update-btn blue-text">Update</a>
-				    </div>
-				</div>
-			</div>
-
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-				<div class="card">
-				    <div class="card-image waves-effect waves-block waves-light">
-				      <img class="activator" src="images/thumbnail-4.jpg">
-				    </div>
-				    <div class="card-content">
-				      <span class="card-title activator grey-text text-darken-4">Theme title<i class="material-icons right">more_vert</i></span>
-				      <p><a href="#">Link on demo</a></p>
-				    </div>
-				    <div class="card-reveal">
-				      <span class="card-title grey-text text-darken-4">Theme title<i class="material-icons right">close</i></span>
-				      <p>Theme description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quidem saepe doloremque repellat minima quod totam, ducimus maiores vero neque?</p>
-				      <a class="waves-effect waves-light btn-flat update-btn blue-text">Update</a>
-				    </div>
-				</div>
-			</div>
-
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-				<div class="card">
-				    <div class="card-image waves-effect waves-block waves-light">
-				      <img class="activator" src="images/thumbnail-5.jpg">
-				    </div>
-				    <div class="card-content">
-				      <span class="card-title activator grey-text text-darken-4">Theme title<i class="material-icons right">more_vert</i></span>
-				      <p><a href="#">Link on demo</a></p>
-				    </div>
-				    <div class="card-reveal">
-				      <span class="card-title grey-text text-darken-4">Theme title<i class="material-icons right">close</i></span>
-				      <p>Theme description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quidem saepe doloremque repellat minima quod totam, ducimus maiores vero neque?</p>
-				      <a class="waves-effect waves-light btn-flat update-btn blue-text">Update</a>
-				    </div>
-				</div>
-			</div>
-
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-				<div class="card">
-				    <div class="card-image waves-effect waves-block waves-light">
-				      <img class="activator" src="images/thumbnail-6.jpg">
-				    </div>
-				    <div class="card-content">
-				      <span class="card-title activator grey-text text-darken-4">Theme title<i class="material-icons right">more_vert</i></span>
-				      <p><a href="#">Link on demo</a></p>
-				    </div>
-				    <div class="card-reveal">
-				      <span class="card-title grey-text text-darken-4">Theme title<i class="material-icons right">close</i></span>
-				      <p>Theme description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quidem saepe doloremque repellat minima quod totam, ducimus maiores vero neque?</p>
-				      <a class="waves-effect waves-light btn-flat update-btn blue-text">Update</a>
-				    </div>
-				</div>
-			</div>
 		</div>
 
 		<a class="btn-floating btn-large waves-effect waves-light red add-new-theme" data-page="addMeta"><i class="material-icons">add</i></a>
@@ -246,7 +166,7 @@
           <div class="card">
             <div class="card-image">
               <div class="drag-and-upload">
-              	<input type="file" class="file-field" name="theme-archive" multiple="multiple"="multiple="multiple"">
+              	<input type="file" class="file-field" name="theme-archive" multiple="multiple">
               	<i class="material-icons file-select-clicker">cloud_upload</i>
               </div>
               <span class="card-title grey-text darken-4">Drag and Drop for upload theme archive. Warning! Only <strong>ZIP</strong> files</span>
@@ -270,6 +190,7 @@
           </div>
         </div>
       </div>
+      <button class="waves-effect waves-light btn  teal lighten-1 white-text next-step-btn" data-page="addMeta"><i class="material-icons left">arrow_back</i>Previus step</button>
 	</section>
 	
 

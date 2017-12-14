@@ -8,7 +8,11 @@ var Controller = function(){
 		self.model.get('meta-cms/', function(data){
 			self.view.cmsListRender(data);
 			initMainPagination();
-		});
+			//console.log($('.main-nav .cms-list a:eq(0)'));
+			setTimeout(function(){
+				$('.main-nav .cms-list a:eq(0)').click();
+			},200);
+		}, false);
 	}
 
 	this.uploadThemeAction = function(){
@@ -54,31 +58,20 @@ var Controller = function(){
 		});
 	}
 
+	this.templateListOnCms = function(cmsId){
+		self.model.get('template-list/' + cmsId, function(data){
+			self.view.templateListRender(data);
+		}, false);
+	}
+
+	this.themeListAction = function(elem){
+		var cmsId = $(elem).attr('href');
+		self.view.totalCountCms($(elem).find('.count').html());
+		self.templateListOnCms(cmsId);
+	}
+
 	this.addDragAndDropEventThumbnail = function(thumb){
-		// $(thumb).on('mousedown', function(){
-		// 	$(this).css({
-		// 		'position': 'relative'
-		// 	}).addClass('dragable');
-		// 	$(this).attr('data-x', self.mouseCoords.x);
-		// });
-
-		// $(thumb).on('mousepress', function(){
-		// 	var left = parseInt($(this).attr('data-x')) - self.mouseCoords.x;
-		// 	$(this).css('left', left + 'px');
-		// });
-
-		// $(thumb).on('mouseup', function(){
-		// 	$(this).removeAttr('style').removeClass('dragable');
-		// });
-		// 
-		// 
-		// 
-		// 
-		// $(thumb).on('dragstart', function(){
-		// 	self.dragThumb = this;
-		// });
-
-		// $().on('dragleave', function)
+		
 	}
 
 	this.listingOnSelect = function(url, container){
@@ -109,11 +102,10 @@ var Controller = function(){
 		self.view.fixAddMetaPageRender();
 	}
 
-	this.pageAction = function(page){
-		console.log('pageAction');
+	this.pageAction = function(page, elem){
 		self.view.removeFixesRendering();
 		if(typeof self[page + 'Action'] != 'undefined'){
-			self[page + 'Action']();
+			self[page + 'Action'](elem);
 		}
 		self.view.pageRender(page);
 		//scroll to top;
@@ -121,7 +113,10 @@ var Controller = function(){
 
 	this.sendDataToServ = function(){
 		self.model.send(self.collectDataForSending(), function(){
-			alert('Well done');
+			//alert('Well done');
+			console.log('Well done');
+			//self.cmsListAction();
+			document.location.reload();
 		}, function(){
 			alert('Error sending');
 		});
