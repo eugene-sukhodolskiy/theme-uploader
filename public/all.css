@@ -22,8 +22,8 @@
 
 .main-nav a.item{
 	width: 100%;
-	line-height: 20px;
-    height: 20px;
+	line-height: 25px;
+    height: 25px;
 	display: block;
 	font-size: 15px;
 	text-align: left;
@@ -78,6 +78,7 @@
 
 .next-step-btn{
 	width: 200px;
+	position: relative;
 }
 
 #addMeta{
@@ -186,6 +187,11 @@ img.thumbnail-item {
 
 #uploadTheme .preloader-container{
 	text-align: left;
+}
+
+.page-title{
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 /*#addMeta .preloader-container{

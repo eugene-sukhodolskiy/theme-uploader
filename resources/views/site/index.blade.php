@@ -40,13 +40,13 @@
 				  </div>
 			</div>
 		</div>
-		<button class="waves-effect waves-light btn red darken-2 white-text upload-theme-btn" data-page="addMeta"><i class="material-icons left">file_upload</i>Upload Theme</button>
+		<!-- <button class="waves-effect waves-light btn red darken-2 white-text upload-theme-btn" data-page="addMeta"><i class="material-icons left">file_upload</i>Upload Theme</button> -->
 	</aside>
 
 	
 	<section class="page" id="addMeta">
 
-		<h3>Add new template - step 1</h3>
+		<h5 class="page-title">Upload template. Step one</h5>
 		<div class="preloader-container">
 			<div class="preloader-wrapper active">
 			    <div class="spinner-layer spinner-red-only">
@@ -202,6 +202,7 @@
 	</section>
 
 	<section class="page" id="uploadTheme">
+		<h5 class="page-title">Upload template. Step two</h5>
 		<div class="row">
         <div class="col s12 m12 l12 xl12">
           <div class="card">
