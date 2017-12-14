@@ -18,10 +18,16 @@ var Controller = function(){
 	}
 
 	this.uploadThemeAction = function(){
-		$(document).mousemove(function( event ) {
-		  self.mouseCoords.x = event.pageX;
-		  self.mouseCoords.y = event.pageY;
-		})
+		self.view.fixAddMetaPageRender();
+		if($('#uploadTheme').attr('data-load') == 'uploaded'){
+			return false;
+		}
+
+		$('#uploadTheme').attr('data-load', 'uploaded');
+		// $(document).mousemove(function( event ) {
+		//   self.mouseCoords.x = event.pageX;
+		//   self.mouseCoords.y = event.pageY;
+		// })
 
 		$('.file-select-clicker').click(function(){
 			$('.drag-and-upload .file-field').click();
