@@ -41,6 +41,8 @@ var View = function(){
 		$(container).material_select('destroy');
 		$(container).html(html);
 		$(container).material_select();
+		// select first element
+		$(container).find('li:first-of-type').click();
 	}
 
 	this.templateListRender = function(data){
