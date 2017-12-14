@@ -178,3 +178,22 @@ img.thumbnail-item {
 	display: none;
 }
 
+.preloader-container{
+	width: 100%;
+    text-align: center;
+    display: none;
+}
+
+#uploadTheme .preloader-container{
+	text-align: left;
+}
+
+/*#addMeta .preloader-container{
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background-color: rgba(255,255,255,.6);
+}*/
+

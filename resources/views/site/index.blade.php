@@ -26,13 +26,40 @@
 			<ul class="cms-list">
 				<!-- <li><a href="#" class="item"><span class="count">10</span>Joomla</a></li> -->
 			</ul>
+			<div class="preloader-container">
+				<div class="preloader-wrapper active">
+				    <div class="spinner-layer spinner-red-only">
+				      <div class="circle-clipper left">
+				        <div class="circle"></div>
+				      </div><div class="gap-patch">
+				        <div class="circle"></div>
+				      </div><div class="circle-clipper right">
+				        <div class="circle"></div>
+				      </div>
+				    </div>
+				  </div>
+			</div>
 		</div>
 		<button class="waves-effect waves-light btn red darken-2 white-text upload-theme-btn" data-page="addMeta"><i class="material-icons left">file_upload</i>Upload Theme</button>
 	</aside>
 
 	
 	<section class="page" id="addMeta">
+
 		<h3>Add new template - step 1</h3>
+		<div class="preloader-container">
+			<div class="preloader-wrapper active">
+			    <div class="spinner-layer spinner-red-only">
+			      <div class="circle-clipper left">
+			        <div class="circle"></div>
+			      </div><div class="gap-patch">
+			        <div class="circle"></div>
+			      </div><div class="circle-clipper right">
+			        <div class="circle"></div>
+			      </div>
+			    </div>
+			</div>
+		</div>
 		<form method="post">
 			<div class="row">
 				<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
@@ -134,7 +161,21 @@
 		</div>
 
 		<div class="row">
-			<h5 class="total right">Total <span>6</span></h5>
+			<h5 class="total right">Total <span>0</span></h5>
+		</div>
+
+		<div class="preloader-container">
+			<div class="preloader-wrapper active">
+			    <div class="spinner-layer spinner-red-only">
+			      <div class="circle-clipper left">
+			        <div class="circle"></div>
+			      </div><div class="gap-patch">
+			        <div class="circle"></div>
+			      </div><div class="circle-clipper right">
+			        <div class="circle"></div>
+			      </div>
+			    </div>
+			</div>
 		</div>
 
 		<div class="row cards-container">
@@ -169,7 +210,7 @@
               	<input type="file" class="file-field" name="theme-archive" multiple="multiple">
               	<i class="material-icons file-select-clicker">cloud_upload</i>
               </div>
-              <span class="card-title grey-text darken-4">Drag and Drop for upload theme archive. Warning! Only <strong>ZIP</strong> files</span>
+              <span class="card-title grey-text darken-4">Drag and Drop or click to cloud icon for upload template archive and preview images. Only formats: zip, png, jpg</span>
             </div>
             <div class="card-content">
               <div class="thumbnail-container drag-and-order">
@@ -184,6 +225,19 @@
               	<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 zip-title"></div>
               	<div class="col-xs-4 col-sm-6 col-md-9 col-lg-9 send-and-upload">
               		<button class="btn waves-effect waves-light green darken-1 uploadToServ">Upload</button>
+              		<div class="preloader-container">
+						<div class="preloader-wrapper">
+						    <div class="spinner-layer spinner-red-only">
+						      <div class="circle-clipper left">
+						        <div class="circle"></div>
+						      </div><div class="gap-patch">
+						        <div class="circle"></div>
+						      </div><div class="circle-clipper right">
+						        <div class="circle"></div>
+						      </div>
+						    </div>
+						</div>
+					</div>
               	</div>
               </div>
             </div>

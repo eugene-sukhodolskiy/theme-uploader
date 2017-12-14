@@ -24,6 +24,8 @@ var View = function(){
 		$('#' + page).css('display', 'block');
 	}
 
+	// this.selectListLoadingCounter = 0;
+
 	this.listingOnSelectRender = function(data, container){
 		var html = '';
 		for(var i=0; i<data.length; i++){
@@ -43,6 +45,7 @@ var View = function(){
 		$(container).material_select();
 		// select first element
 		$(container).find('li:first-of-type').click();
+		
 	}
 
 	this.templateListRender = function(data){
@@ -58,7 +61,7 @@ var View = function(){
 		$('.card-for-clone').css('display', 'none');
 		for(var i=0;i<data['templates'].length;i++){
 			if(data['thumbs'][i] == null){
-				data['thumbs'][i] = {'src': 'http://lorempixel.com/300/200'};
+				data['thumbs'][i] = {'src': 'images/default-thumbnail.jpg'};
 			}
 			$('.card-for-clone').clone().appendTo('#themeList .cards-container');
 			var card = $('#themeList .cards-container .card:last');
@@ -75,5 +78,27 @@ var View = function(){
 
 	this.totalCountCms = function(count){
 		$('#themeList .total span').html(count);
+	}
+
+	this.preloaderShow = function(container){
+		$(container).find('.preloader-container').css('display', 'block');
+		$(container).find('.preloader-container').find('.preloader-wrapper').addClass('active');
+	}
+
+	this.preloaderHide = function(container){
+		$(container).find('.preloader-container').css('display', 'none');
+		$(container).find('.preloader-container').find('.preloader-wrapper').removeClass('active');
+	}
+
+	this.afterUploadTheme = function(msg){
+		self.preloaderHide('#uploadTheme');
+		$('#uploadTheme .uploadToServ').css('display', 'block');
+		alert(msg);
+		console.log(msg);
+	}
+
+	this.beforeUploadTheme = function(){ // call when start upload (after press .uploadToServ)
+		self.preloaderShow('#uploadTheme');
+		$('#uploadTheme .uploadToServ').css('display', 'none');
 	}
 }

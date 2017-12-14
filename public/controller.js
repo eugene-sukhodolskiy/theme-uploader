@@ -5,8 +5,10 @@ var Controller = function(){
 	this.mouseCoords = {x: 0, y: 0};
 
 	this.cmsListAction = function(){
+		self.view.preloaderShow('.main-nav');
 		self.model.get('meta-cms/', function(data){
 			self.view.cmsListRender(data);
+			self.view.preloaderHide('.main-nav');
 			initMainPagination();
 			//console.log($('.main-nav .cms-list a:eq(0)'));
 			setTimeout(function(){
@@ -59,8 +61,10 @@ var Controller = function(){
 	}
 
 	this.templateListOnCms = function(cmsId){
+		self.view.preloaderShow('#themeList');
 		self.model.get('template-list/' + cmsId, function(data){
 			self.view.templateListRender(data);
+			self.view.preloaderHide('#themeList');
 		}, false);
 	}
 
@@ -77,6 +81,9 @@ var Controller = function(){
 	this.listingOnSelect = function(url, container){
 		self.model.get(url, function(data){
 			self.view.listingOnSelectRender(data, container);
+			setTimeout(function(){
+				$('body').click();
+			},100);
 		});
 	}
 
@@ -84,7 +91,7 @@ var Controller = function(){
 	 * [addMetaAction for constroll processes after render page]
 	 */
 	this.addMetaAction = function(){
-
+		self.view.preloaderShow('#addMeta');
 		self.listingOnSelect('meta-cms/', '.cms-list-select');
 		$('.cms-list-select').bind('change', function(){
 			self.listingOnSelect('meta-tech/' + getSelectedCms(), '.compatible-with');
@@ -98,6 +105,9 @@ var Controller = function(){
 
 		self.listingOnSelect('meta-tech/' + getSelectedCms(), '.compatible-with');
 		self.listingOnSelect('meta-compatible/' + getSelectedCms(), '.software');
+		setTimeout(function(){
+			self.view.preloaderHide('#addMeta');
+		}, 2000);
 
 		self.view.fixAddMetaPageRender();
 	}
@@ -112,13 +122,13 @@ var Controller = function(){
 	}
 
 	this.sendDataToServ = function(){
+		self.view.beforeUploadTheme();
 		self.model.send(self.collectDataForSending(), function(){
-			alert('Well done');
-			console.log('Well done');
+			self.view.afterUploadTheme('Well done');
 			//self.cmsListAction();
 			document.location = document.location;
 		}, function(){
-			alert('Error sending');
+			self.view.afterUploadTheme('Error sending');
 		});
 	}
 
