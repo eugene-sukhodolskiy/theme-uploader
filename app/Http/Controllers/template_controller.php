@@ -40,10 +40,10 @@ class template_controller extends Controller
     	$data['zip'] = explode('data:application/zip;base64,', $data['zip']);	
 		$data['zip'] = $data['zip'][1];
 
-    	$response = curl_post('http://wp/upload-and-demo.php', [
+    	$response = curl_post('http://wptesting.onlinewebshop.net/upload-and-demo.php', [
     		'cms_name' => $cmsname,
     		'theme_name' => $data['template_name'],
-    		'url' => 'http://wp',
+    		'url' => 'http://wptesting.onlinewebshop.net',
     		'zip' => $data['zip']
     	]);
 
