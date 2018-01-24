@@ -26,6 +26,7 @@ class CreateTemplatesTable extends Migration
             $table->integer('count_column');
             $table->integer('meta_layout');
             $table->text('description');
+            $table->integer('visible_counter')->default(0)
         });
     }
 

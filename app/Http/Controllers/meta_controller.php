@@ -60,4 +60,13 @@ class meta_controller extends Controller
         
         return json_encode($result);
     }
+
+    public function allKeys(){
+        $d = DB::table('keywords') -> select('key_name') -> get();
+        $ret = [];
+        foreach($d as $item => $val){
+            $ret[] = $val -> key_name;
+        }
+        return json_encode($ret);
+    }
 }

@@ -18,7 +18,7 @@ class template_controller extends Controller
 		        CURLOPT_FRESH_CONNECT => 1, 
 		        CURLOPT_RETURNTRANSFER => 1, 
 		        CURLOPT_FORBID_REUSE => 1, 
-		        CURLOPT_TIMEOUT => 4, 
+		        CURLOPT_TIMEOUT => 16, 
 		        CURLOPT_POSTFIELDS => http_build_query($post) 
 		    ); 
 
@@ -26,7 +26,8 @@ class template_controller extends Controller
 		    curl_setopt_array($ch, ($options + $defaults)); 
 		    if( ! $result = curl_exec($ch)) 
 		    { 
-		        trigger_error(curl_error($ch)); 
+		        //trigger_error(curl_error($ch)); 
+		        return false;
 		    } 
 		    curl_close($ch); 
 		    return $result; 
@@ -34,27 +35,43 @@ class template_controller extends Controller
 
     	$data = json_decode(Input::get('data'), true);
 
+    	// file_put_contents('log.txt', json_encode($data));
+
     	$cmsname = DB::table('meta') -> select('meta_value') -> where('id', $data['cms']) -> get();
     	$cmsname = $cmsname[0] -> meta_value;
 
-    	$data['zip'] = explode('data:application/zip;base64,', $data['zip']);	
-		$data['zip'] = $data['zip'][1];
 
-    	$response = curl_post('http://wptesting.onlinewebshop.net/upload-and-demo.php', [
-    		'cms_name' => $cmsname,
-    		'theme_name' => $data['template_name'],
-    		'url' => 'http://wptesting.onlinewebshop.net',
-    		'zip' => $data['zip']
-    	]);
+  //   	if(strstr($data['zip'], 'data:application/octet-stream;base64,')){
+	 //    	$data['zip'] = explode('data:application/octet-stream;base64,', $data['zip']);	
+		// 	$data['zip'] = $data['zip'][1];
+		// }else{
+		// 	$data['zip'] = explode('data:application/zip;base64,', $data['zip']);	
+		// 	$data['zip'] = $data['zip'][1];
+		// }
 
-    	$response = json_decode($response, true);
+    	// $response = curl_post('http://wp.wection.site/upload-and-demo.php', [
+    	// 	'cms_name' => $cmsname,
+    	// 	'theme_name' => $data['template_name'],
+    	// 	'url' => 'http://wp.wection.site',
+    	// 	'zip' => $data['zip']
+    	// ]);
+
+    	// file_put_contents('response.txt', $response);
+    	
+    	// $response = json_decode($response, true);
+   //  	if(!isset($response['demo_url']) || $response['demo_url'] == ''){
+   //  		$temp_name = md5($data['template_name']);
+	 	// 	if(strtolower($cmsname) == 'wordpress'){
+			// 	$response['demo-url'] = 'http://wp.wection.site/?themedemo=' . $temp_name;
+			// }
+   //  	}
 
     	// INSERT TO DB
     	$template_id = DB::table('templates')->insertGetId([
 			'meta_cms' => $data['cms'],
 			'date_at_create' => date('Y-m-d H:i:s'),
 			'date_of_update' => date('Y-m-d H:i:s'),
-			'link_on_demo' => $response['demo-url'],
+			'link_on_demo' => $data['link_on_demo'],
 			'name' => $data['template_name'],
 			'meta_browsers' => json_encode($data['compatible-browsers']),
 			'meta_tech' => json_encode($data['compatible-with']),
@@ -83,14 +100,67 @@ class template_controller extends Controller
     }
 
     public function templateList($cms_id){
-    	$templates = DB::table('templates') -> select('*') -> where('meta_cms', $cms_id) -> get();
-    	$data = ['templates' => $templates];
-    	$thumbs = [];
-    	foreach($templates as $item => $template){
-    		// return json_encode($template -> id);
-    		$thumbs[] = DB::table('thumbnails') -> select('*') -> where('template_id', $template -> id) -> first();
-    	}
-    	$data['thumbs'] = $thumbs;
-    	return json_encode($data);
+    	return $this -> template($cms_id);
     }
+
+    public function templateListWithOrder($cms_id, $order){
+        return $this -> template($cms_id, $order);
+    }
+
+    public function template($cms_id, $order = NULL, $s = NULL){
+        if($order == NULL){
+            if($s == NULL){
+                $templates = DB::table('templates') -> select('*') -> where('meta_cms', $cms_id) -> get();
+            }else{
+                $templates = DB::table('templates') -> select('*') -> where('meta_cms', $cms_id) -> where('name', 'like', '%' . $s . '%') -> get();
+            }
+        }else{
+            if($s == NULL){
+                $templates = DB::table('templates') -> orderBy($order) -> select('*') -> where('meta_cms', $cms_id) -> get();
+            }else{
+                $templates = DB::table('templates') -> orderBy($order) -> select('*') -> where('meta_cms', $cms_id) -> where('name', 'like', '%' . $s . '%') -> get();
+            }
+        }
+        $data = ['templates' => $templates];
+        $thumbs = [];
+        foreach($templates as $item => $template){
+            // return json_encode($template -> id);
+            $thumbs[] = DB::table('thumbnails') -> select('*') -> where('template_id', $template -> id) -> first();
+        }
+        $data['thumbs'] = $thumbs;
+        return json_encode($data);
+    }
+
+    public function search($cms_id, $s){
+        return $this -> template($cms_id, NULL, $s);
+    }
+
+    public function searchWithOrder($cms_id, $order, $s){
+        return $this -> template($cms_id, $order, $s);
+    }
+
+    public function isLinkOnDemoUniq(){
+        $link = Input::get('link');
+        $link = addslashes($link);
+        $res = DB::table('templates') -> where('link_on_demo', $link) -> count();
+        return json_encode($res);
+    }
+
+    public function getTemplateOnLink(){
+    	// $link = json_decode($link, true);
+    	// $link = $link['link'];
+    	$link = Input::get('link');
+        $link = addslashes($link);
+    	$template = DB::table('templates') -> select('*') -> where('link_on_demo', $link) -> first();
+    	$thumbs = DB::table('thumbnails') -> select('*') -> where('template_id', $template -> id) -> get();
+    	return json_encode(['template' => $template, 'thumbs' => $thumbs]);
+    }
+
+    public function incrementVisibleCounter(){
+        $link = Input::get('link');
+        $link = addslashes($link);
+        $res = DB::table('templates') -> select('id', 'visible_counter') -> where('link_on_demo', $link) -> first();
+        DB::table('templates') -> where('id', $res -> id) -> update(['visible_counter' => $res -> visible_counter + 1]);
+    }
+
 }

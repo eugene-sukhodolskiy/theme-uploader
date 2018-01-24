@@ -6,8 +6,10 @@ $(document).ready(function() {
 
     $('select').material_select();
 
-    keywords();
-
+    // keywords();
+    
+    controller.initKeywords();
+    controller.initWindow();
     controller.cmsListAction();
 
 });
@@ -16,44 +18,44 @@ var getSelectedCms = function(){
 	return $('select[name="cms"] option[value="' + $('select[name="cms"]').prop('value') + '"]').html();
 }
 
-var keywords = function(){
-	$('[data-keywords-container]').keydown(function(e){
-		if(e.keyCode == 13){
-			var val = $(this).prop('value');
-			var oldVal = $(this).attr('data-keywords-value');
-			oldVal = (oldVal == '') ? oldVal : oldVal + ';';
-			$(this).attr('data-keywords-value', oldVal + val);
+// var keywords = function(){
+// 	$('[data-keywords-container]').keydown(function(e){
+// 		if(e.keyCode == 13){
+// 			var val = $(this).prop('value');
+// 			var oldVal = $(this).attr('data-keywords-value');
+// 			oldVal = (oldVal == '') ? oldVal : oldVal + ';';
+// 			$(this).attr('data-keywords-value', oldVal + val);
 
-			var html = '<div class="keyword-item" ';
-			html += 'data-keyword-item-value="' + val + '">';
-			html += val + '<i class="material-icons">clear</i>';
-			html += '</div>';
-			var cont = $(this).attr('data-keywords-container');
-			$(cont).append(html);
-			$(this).prop('value', '').attr('value', '');
+// 			var html = '<div class="keyword-item" ';
+// 			html += 'data-keyword-item-value="' + val + '">';
+// 			html += val + '<i class="material-icons">clear</i>';
+// 			html += '</div>';
+// 			var cont = $(this).attr('data-keywords-container');
+// 			$(cont).append(html);
+// 			$(this).prop('value', '').attr('value', '');
 
-			$(cont).find('i.material-icons').parent().unbind('click');
+// 			$(cont).find('i.material-icons').parent().unbind('click');
 
-			// remove keyword
-			$(cont).find('i.material-icons').parent().bind('click', function(){
-				var val = $(this).attr('data-keyword-item-value');
-				var field = $(this).parent().attr('data-keywords-field');
-				var keywords = $(field).attr('data-keywords-value');
-				keywords = keywords.split(';');
-				for(var i=0;i<keywords.length;i++){
-					if(keywords[i] == val){
-						keywords.splice(i, 1);
-					}
-				}
+// 			// remove keyword
+// 			$(cont).find('i.material-icons').parent().bind('click', function(){
+// 				var val = $(this).attr('data-keyword-item-value');
+// 				var field = $(this).parent().attr('data-keywords-field');
+// 				var keywords = $(field).attr('data-keywords-value');
+// 				keywords = keywords.split(';');
+// 				for(var i=0;i<keywords.length;i++){
+// 					if(keywords[i] == val){
+// 						keywords.splice(i, 1);
+// 					}
+// 				}
 
-				keywords = keywords.join(';');
-				$(field).attr('data-keywords-value', keywords);
+// 				keywords = keywords.join(';');
+// 				$(field).attr('data-keywords-value', keywords);
 
-				$(this).remove(); // remove from DOM
-			});
-		}
-	});
-}
+// 				$(this).remove(); // remove from DOM
+// 			});
+// 		}
+// 	});
+// }
 
 var initMainPagination = function(){
 	 // init paging
@@ -66,7 +68,7 @@ var initMainPagination = function(){
 var loadImgAndZipFile = function(file){
 	var filename = file.name.split('.');
 	var format = filename[filename.length - 1];
-	if(format == 'zip' || format == 'ZIP'){
+	/*if(format == 'zip' || format == 'ZIP'){
 		//console.log(file);
 		// Adding to theme file list
 		var reader = new FileReader();
@@ -80,8 +82,7 @@ var loadImgAndZipFile = function(file){
 		}
 		reader.readAsDataURL(file);
 
-	}else if(format == 'png' || format == 'PNG' || format == 'jpg' || format == 'JPG' || format == 'jpeg' || format == 'JPEG'){
-		//console.log(file);
+	}else*/ if(format == 'png' || format == 'PNG' || format == 'jpg' || format == 'JPG' || format == 'jpeg' || format == 'JPEG'){
 		// Adding to thumbnail list
 		var reader = new FileReader();
 		reader.onload = function(e){
@@ -117,7 +118,7 @@ var loadImgAndZipFile = function(file){
 		reader.readAsDataURL(file);
 		
 	}else{
-		console.log('That file not zip');
+		console.log('That file not image!');
 	}
 }
 
@@ -133,4 +134,40 @@ var getMultipleSelectValue = function(select){
 	}
 
 	return res.length ? res : false;
+}
+
+function getCookie(name) {
+  var matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+function setCookie(name, value, options) {
+  options = options || {};
+
+  var expires = options.expires;
+
+  if (typeof expires == "number" && expires) {
+    var d = new Date();
+    d.setTime(d.getTime() + expires * 1000);
+    expires = options.expires = d;
+  }
+  if (expires && expires.toUTCString) {
+    options.expires = expires.toUTCString();
+  }
+
+  value = encodeURIComponent(value);
+
+  var updatedCookie = name + "=" + value;
+
+  for (var propName in options) {
+    updatedCookie += "; " + propName;
+    var propValue = options[propName];
+    if (propValue !== true) {
+      updatedCookie += "=" + propValue;
+    }
+  }
+
+  document.cookie = updatedCookie;
 }

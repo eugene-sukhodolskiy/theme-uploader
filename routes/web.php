@@ -35,12 +35,26 @@ Route::get('/meta-cms', 'meta_controller@get_cms');
 
 Route::get('/templates-count/{cms}', 'meta_controller@get_count_templates');
 
+Route::get('/all-keys', 'meta_controller@allKeys');
+
 Route::get('/template-list/{cms_id}', 'template_controller@templateList');
+
+Route::get('/template-list/{cms_id}/{order}', 'template_controller@templateListWithOrder');
+
+Route::get('/template', 'template_controller@getTemplateOnLink');
+
+Route::get('/islinkondemouniq', 'template_controller@isLinkOnDemoUniq');
+
+Route::get('/{cms_id}/search/{s}', 'template_controller@search');
+
+Route::get('/{cms_id}/search/{s}/order/{order}', 'template_controller@searchWithOrder');
 
 Route::get('/', 'site@run_site');
 
 // Route::get('/upload-template', 'template_controller@upload');
 Route::patch('/upload-template', 'template_controller@upload');
+
+Route::get('/increment-visible-counter', 'template_controller@incrementVisibleCounter');
 
 // Route::get('/', function () {
 
