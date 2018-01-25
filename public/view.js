@@ -74,6 +74,8 @@ var View = function(){
 			$(card).parent().removeClass('card-for-clone');
 		}
 
+		controller.addEventToUpdateBtn();
+
 	}
 
 	this.totalCountCms = function(count){
@@ -121,7 +123,7 @@ var View = function(){
 			self.preloaderHide($('.demo-iframe').parent());
 		});
 
-		self.fixIframe();
+		// self.fixIframe();
 
 		// render other parts demo page
 		var cont = $('.demo-info');
@@ -208,7 +210,7 @@ var View = function(){
 	}
 
 	this.fixIframe = function(){
-		var iframe = document.getElementsById('demo-iframe')[0];
+		var iframe = document.getElementById('demo-iframe')[0];
 		var url = iframe.src;
 		var getData = function (data) {
 		    if (data && data.query && data.query.results && data.query.results.resources && data.query.results.resources.content && data.query.results.resources.status == 200) loadHTML(data.query.results.resources.content);
@@ -229,5 +231,63 @@ var View = function(){
 		}
 
 		loadURL(iframe.src);
+	}
+
+	this.clearAllSelect = function(){
+		var selects = $('#addMeta select');
+		for(var i in selects){
+			var materialSelectId = $(selects[i]).attr('data-select-id');
+			$('#'+materialSelectId+' li', 0).removeClass('active');
+		}
+	}
+
+	this.setDataToFormFormUpdate = function(template, keys, thumbnails){
+		$('#template_name').val(template.name).parent().find('label').addClass('active');;
+		$('#description').val(template.description).html(template.description).parent().find('label').addClass('active');
+
+		for(var i in keys){
+			keys[i]['tag'] = keys[i]['key_name'];
+		}
+
+		$('[name="link_on_demo"]').val(template['link_on_demo']).parent().find('label').addClass('active');
+
+		for(var i in thumbnails){
+			var img = new Image();
+			img.src = thumbnails[i].src;
+			THUMBNAILS.push(thumbnails[i].src);
+			$(img).addClass('thumbnail-item');
+			var countThumbs = $('.thumbnail-container .thumbnail-item').length;
+			$(img).attr('data-index', countThumbs);
+			addThumbnail(img);
+		}
+
+		setTimeout(function(){
+			self.preloaderHide('#addMeta');
+			self.clearAllSelect();
+			// self.setMaterialSelectData('compatible-browsers', JSON.parse(template.meta_browsers));
+
+			$('.keywords-container').material_chip({
+				data: keys,
+			    placeholder: 'Enter a tag',
+			    secondaryPlaceholder: '+Tag'
+			   });
+		}, 3000);
+	}
+
+	this.setMaterialSelectData = function(name, arr){
+		var materialSelectId = $('[name="'+name+'"]').attr('data-select-id');
+		var options = $('[name="'+name+'"]').find('option');
+		var inx = [];
+		for(var i in arr){
+			for(var n in options){
+				if(arr[i] == $(options[n]).attr('value')){
+					inx.push(n);
+				}
+			}
+		}
+
+		for(var i in inx){
+			$('#'+materialSelectId).find('li:eq(' + inx[i] + ')');
+		}
 	}
 }

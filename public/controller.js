@@ -209,6 +209,7 @@ var Controller = function(){
 	 */
 	this.addMetaAction = function(){
 		self.view.preloaderShow('#addMeta');
+		$('.cms-list-select').parent().css('display', 'block');
 		self.listingOnSelect('meta-cms/', '.cms-list-select');
 		$('.cms-list-select').bind('change', function(){
 			self.listingOnSelect('meta-tech/' + getSelectedCms(), '.compatible-with');
@@ -225,6 +226,22 @@ var Controller = function(){
 		setTimeout(function(){
 			self.view.preloaderHide('#addMeta');
 		}, 2000);
+
+		self.view.fixAddMetaPageRender();
+	}
+
+	this.loadMetaForUpdatePage = function(selectedCMS){
+		console.log('selectedCMS', selectedCMS);
+		self.view.preloaderShow('#addMeta');
+		$('.cms-list-select').parent().css('display', 'none');
+		self.listingOnSelect('meta-resolution/', '.resolution');
+		self.listingOnSelect('meta-browser/', '.compatible-browsers');
+		self.listingOnSelect('meta-file-type/', '.file-type');
+		self.listingOnSelect('meta-columns/', '.column-count');
+		self.listingOnSelect('meta-layout/', '.layout-type');
+
+		self.listingOnSelect('meta-tech/' + selectedCMS, '.compatible-with');
+		self.listingOnSelect('meta-compatible/' + selectedCMS, '.software');
 
 		self.view.fixAddMetaPageRender();
 	}
@@ -304,6 +321,7 @@ var Controller = function(){
 			if(data.template_name.length > parseInt($('[name="template_name"]').attr('data-minlen'))){
 				if(data.description.length > parseInt($('[name="description"]').attr('data-minlen'))){
 					var counter = 0;
+					// if(typeof selectarr.length == 'undefined') return false;
 					for(var i=0; i<selectarr.length; i++){
 						if(data[selectarr[i]].length){
 							counter++;
@@ -334,7 +352,6 @@ var Controller = function(){
 
 				self.checkLinkOnExists(lod.val(), function(){
 					//is true
-					console.log('Hello');
 					self.isLinkOnDemoUniq(lod.val(), function(){
 						self.view.validLinkOnDemo(); // isUniq
 					}, function(){
@@ -406,5 +423,28 @@ var Controller = function(){
 	this.checkLinkOnExists = function(link, isTrue, isFalse){
 		isTrue();
 	}
+
+	this.loadThemeForUpdate = function(themeId){
+		self.model.get('get-theme-info/' + themeId, function(data){
+			console.log('themeId', themeId);
+			console.log(data);
+			data['keys'] = JSON.parse(data['keys']);
+			self.loadMetaForUpdatePage(data['cms']['meta_value']);
+			self.view.setDataToFormFormUpdate(data['template'], data['keys'], data['thumbnails']);
+		});
+	}
+
+	this.addEventToUpdateBtn = function(){
+		$('.upldate-template-btn').on('click', function(e){
+			e.preventDefault();
+			var themeId = $(this).attr('href').split('#')[1];
+			self.loadThemeForUpdate(themeId);
+			$('.page').css('display', 'none');
+			$('#addMeta').css('display', 'block');
+			return;
+		});
+	}
+
+
 
 }

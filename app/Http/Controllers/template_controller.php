@@ -163,4 +163,22 @@ class template_controller extends Controller
         DB::table('templates') -> where('id', $res -> id) -> update(['visible_counter' => $res -> visible_counter + 1]);
     }
 
+    public function getKeysOnTemplateId($template_id){
+        $keys = DB::table('keywords') -> select('key_name') -> where('template_id', $template_id) -> get();
+        return json_encode($keys);
+    }
+
+    public function getThemeData($id){
+        $template = DB::table('templates') -> select() -> where('id', $id) -> first();
+        $cms = DB::table('meta') -> select('meta_value') -> where('id', $template -> meta_cms) -> first();
+        $thumbnails = DB::table('thumbnails') -> where('template_id', $id) -> get();
+        $res = [
+            "template" => $template,
+            "keys" => $this -> getKeysOnTemplateId($id),
+            "cms" => $cms,
+            "thumbnails" => $thumbnails
+        ];
+        return json_encode($res);
+    }
+
 }

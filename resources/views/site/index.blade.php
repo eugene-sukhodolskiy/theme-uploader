@@ -12,7 +12,7 @@
 		var TOKEN = "{{$token}}"
 	</script>
 	<meta name="csrf-token" content="{{ csrf_token() }}">
-	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 	<script type="text/javascript" src="model.js"></script>
 	<script type="text/javascript" src="view.js"></script>
@@ -278,6 +278,7 @@
               	</div>
               	<div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 send-and-upload">
               		<button class="btn waves-effect waves-light green darken-1 uploadToServ disabled">Upload</button>
+              		<button class="btn waves-effect waves-light green darken-1 updateDataOnServ disabled">Update</button>
               		<div class="preloader-container">
 						<div class="preloader-wrapper">
 						    <div class="spinner-layer spinner-red-only">

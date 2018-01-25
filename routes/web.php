@@ -56,6 +56,8 @@ Route::patch('/upload-template', 'template_controller@upload');
 
 Route::get('/increment-visible-counter', 'template_controller@incrementVisibleCounter');
 
+Route::get('/get-theme-info/{id}', 'template_controller@getThemeData');
+
 // Route::get('/', function () {
 
 // 	$tasks = DB::table('meta')->get();
