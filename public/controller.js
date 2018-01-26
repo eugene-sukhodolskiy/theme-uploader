@@ -1,14 +1,18 @@
 var Controller = function(){
 	var self = this;
 	this.model = new Model();
-	this.view = new View();
+	this.view = new View(this);
 	this.mouseCoords = {x: 0, y: 0};
 	this.currentThemeLink = '';
 	this.currentCmsId;
-	this.lastOrder = false;
+	this.lastOrder = 'id';
+	this.updateThemePageFlag = false;
+	this.prevPage = '';
+	this.currentPage = 'themeList';
+	this.themeId = -1;
 
 	this.search = function(s){
-		if(self.lastOrder){
+		if(self.lastOrder == false || self.lastOrder == 'false'){
 			var url = self.currentCmsId + '/search/' + s;
 		}else{
 			var url = self.currentCmsId + '/search/' + s + '/order/' + self.lastOrder;
@@ -54,7 +58,7 @@ var Controller = function(){
 
 	this.setLastOrder = function(){
 		var order = getCookie('order');
-		if(typeof order != 'undefined'){
+		if(typeof order != 'undefined' && order != 'false' && order != 'true'){
 			self.lastOrder = order;
 		}
 	};
@@ -208,8 +212,13 @@ var Controller = function(){
 	 * [addMetaAction for constroll processes after render page]
 	 */
 	this.addMetaAction = function(){
+		if(self.prevPage == 'uploadTheme'){
+			return false;
+		}
 		self.view.preloaderShow('#addMeta');
-		$('.cms-list-select').parent().css('display', 'block');
+		if(self.updateThemePageFlag !== true){
+			self.view.clearFieldsOnAddMetaPage();
+		}
 		self.listingOnSelect('meta-cms/', '.cms-list-select');
 		$('.cms-list-select').bind('change', function(){
 			self.listingOnSelect('meta-tech/' + getSelectedCms(), '.compatible-with');
@@ -231,9 +240,11 @@ var Controller = function(){
 	}
 
 	this.loadMetaForUpdatePage = function(selectedCMS){
+		if(self.prevPage == 'uploadTheme'){
+			return false;
+		}
 		console.log('selectedCMS', selectedCMS);
 		self.view.preloaderShow('#addMeta');
-		$('.cms-list-select').parent().css('display', 'none');
 		self.listingOnSelect('meta-resolution/', '.resolution');
 		self.listingOnSelect('meta-browser/', '.compatible-browsers');
 		self.listingOnSelect('meta-file-type/', '.file-type');
@@ -261,6 +272,8 @@ var Controller = function(){
 	this.pageAction = function(page, elem){
 		self.view.closeMenu();
 		self.view.removeFixesRendering();
+		self.prevPage = self.currentPage;
+		self.currentPage = page;
 		if(typeof self[page + 'Action'] != 'undefined'){
 			self[page + 'Action'](elem);
 		}
@@ -377,6 +390,11 @@ var Controller = function(){
 	}
 
 	this.isLinkOnDemoUniq = function(link, isTrue, isFalse){
+		if(self.updateThemePageFlag === true){
+			isTrue();
+			return true;
+		}
+
 		if(self.lastDemoOnLinkCheckOnUniq == link){
 			return false;
 		}
@@ -425,10 +443,13 @@ var Controller = function(){
 	}
 
 	this.loadThemeForUpdate = function(themeId){
+		self.themeId = themeId;
 		self.model.get('get-theme-info/' + themeId, function(data){
 			console.log('themeId', themeId);
 			console.log(data);
-			data['keys'] = JSON.parse(data['keys']);
+			if(typeof data['keys'] == 'string'){
+				data['keys'] = JSON.parse(data['keys']);
+			}
 			self.loadMetaForUpdatePage(data['cms']['meta_value']);
 			self.view.setDataToFormFormUpdate(data['template'], data['keys'], data['thumbnails']);
 		});
@@ -440,11 +461,32 @@ var Controller = function(){
 			var themeId = $(this).attr('href').split('#')[1];
 			self.loadThemeForUpdate(themeId);
 			$('.page').css('display', 'none');
-			$('#addMeta').css('display', 'block');
+
+			//special params for update page
+			$('#addMeta').css('display', 'block').addClass('update-theme');
+			self.updateThemePageFlag = true;
+			$('.send-and-upload').addClass('show-update-btn');
 			return;
 		});
 	}
 
+	this.sendDataToServForUpdate = function(){
+		self.view.beforeUploadTheme();
+		var data = self.model.collectDataForSending();
+		data.updateFlag = true;
+		data['template_id'] = self.themeId;
+		self.model.send(data, function(){
+			document.location.reload();
+		}, function(){
+			self.view.afterUploadTheme('Sending was failed');
+		});
+	}
+
+	this.addEventToUpdateDataOnServBtn = function(){
+		$('.updateDataOnServ').on('click', function(){
+			self.sendDataToServForUpdate();
+		});
+	}
 
 
 }

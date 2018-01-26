@@ -413,3 +413,15 @@ img.thumbnail-item {
 	display: none;
 }
 
+.update-theme .cms-list-select-wrapper{
+	display: none;
+}
+
+.show-update-btn .updateDataOnServ{
+	display: block;
+}
+
+.show-update-btn .uploadToServ{
+	display: none;
+}
+

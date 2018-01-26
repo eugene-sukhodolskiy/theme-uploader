@@ -11,6 +11,13 @@ $(document).ready(function() {
     controller.initKeywords();
     controller.initWindow();
     controller.cmsListAction();
+    controller.addEventToUpdateDataOnServBtn();
+
+    $('.add-new-theme').on('click',function(){
+    	$('#addMeta').removeClass('update-theme');
+    	controller.updateThemePageFlag = false;
+    	$('.send-and-upload').removeClass('show-update-btn');
+    });
 
 });
 

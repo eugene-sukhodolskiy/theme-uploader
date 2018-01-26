@@ -37,8 +37,10 @@ class template_controller extends Controller
 
     	// file_put_contents('log.txt', json_encode($data));
 
-    	$cmsname = DB::table('meta') -> select('meta_value') -> where('id', $data['cms']) -> get();
-    	$cmsname = $cmsname[0] -> meta_value;
+        if(!isset($data['updateFlag'])){
+        	$cmsname = DB::table('meta') -> select('meta_value') -> where('id', $data['cms']) -> get();
+        	$cmsname = $cmsname[0] -> meta_value;
+        }
 
 
   //   	if(strstr($data['zip'], 'data:application/octet-stream;base64,')){
@@ -66,35 +68,50 @@ class template_controller extends Controller
 			// }
    //  	}
 
-    	// INSERT TO DB
-    	$template_id = DB::table('templates')->insertGetId([
-			'meta_cms' => $data['cms'],
-			'date_at_create' => date('Y-m-d H:i:s'),
-			'date_of_update' => date('Y-m-d H:i:s'),
-			'link_on_demo' => $data['link_on_demo'],
-			'name' => $data['template_name'],
-			'meta_browsers' => json_encode($data['compatible-browsers']),
-			'meta_tech' => json_encode($data['compatible-with']),
-			'meta_file_type' => json_encode($data['file_type']),
-			'count_column' => $data['column'],
-			'meta_layout' => $data['layout'],
-			'description' => $data['description']
-    	]);
 
-    	foreach($data['keywords'] as $i => $keyword){
-    		DB::table('keywords') -> insert([
-    			'template_id' => $template_id,
-    			'key_name' => $keyword
-    		]);
-    	}
+        $arr = [
+            'meta_cms' => $data['cms'],
+            'date_at_create' => date('Y-m-d H:i:s'),
+            'date_of_update' => date('Y-m-d H:i:s'),
+            'link_on_demo' => $data['link_on_demo'],
+            'name' => $data['template_name'],
+            'meta_browsers' => json_encode($data['compatible-browsers']),
+            'meta_tech' => json_encode($data['compatible-with']),
+            'meta_file_type' => json_encode($data['file_type']),
+            'count_column' => $data['column'],
+            'meta_layout' => $data['layout'],
+            'description' => $data['description']
+        ];
 
-    	foreach($data['thumbnails'] as $i => $thumb){
-    		DB::table('thumbnails') -> insert([
-    			'template_id' => $template_id,
-    			'src' => $thumb,
-    			'item_index' => $i
-    		]);
-    	}
+        $template_id;
+
+        if(!isset($data['updateFlag'])){
+        	// INSERT TO DB
+        	$template_id = DB::table('templates')->insertGetId($arr);
+
+        }else{
+            // UPDATE TO DB
+            unset($arr['meta_cms']);
+            DB::table('templates') -> where('id', $data['template_id']) -> update($arr);
+            $template_id = $data['template_id'];
+            DB::table('keywords') -> where('template_id', $template_id) -> delete();
+            DB::table('thumbnails') -> where('template_id', $template_id) -> delete();
+        }
+
+        foreach($data['keywords'] as $i => $keyword){
+            DB::table('keywords') -> insert([
+                'template_id' => $template_id,
+                'key_name' => $keyword
+            ]);
+        }
+
+        foreach($data['thumbnails'] as $i => $thumb){
+            DB::table('thumbnails') -> insert([
+                'template_id' => $template_id,
+                'src' => $thumb,
+                'item_index' => $i
+            ]);
+        }
 
     	return 'true';
     }
@@ -135,7 +152,7 @@ class template_controller extends Controller
         return $this -> template($cms_id, NULL, $s);
     }
 
-    public function searchWithOrder($cms_id, $order, $s){
+    public function searchWithOrder($cms_id, $s, $order){
         return $this -> template($cms_id, $order, $s);
     }
 

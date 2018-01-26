@@ -1,5 +1,6 @@
-var View = function(){
+var View = function(app){
 	var self = this;
+	this.controller = app;
 
 	this.cmsListRender = function(data){
 		var html = '';
@@ -181,12 +182,14 @@ var View = function(){
 		var lod = $('#link_on_demo');
 		lod.addClass('valid').removeClass('invalid');
 		$('.uploadToServ').removeClass('disabled');
+		$('.updateDataOnServ').removeClass('disabled');
 	}	
 
 	this.invalidLinkOnDemo = function(){
 		var lod = $('#link_on_demo');
 		lod.removeClass('valid').addClass('invalid');
 		$('.uploadToServ').addClass('disabled');
+		$('.updateDataOnServ').addClass('disabled');
 	}	
 
 	this.openMenu = function(){
@@ -289,5 +292,16 @@ var View = function(){
 		for(var i in inx){
 			$('#'+materialSelectId).find('li:eq(' + inx[i] + ')');
 		}
+	}
+
+	this.clearFieldsOnAddMetaPage = function(){
+		$('[name="template_name"]').val('').parent().find('label').removeClass('active');
+		$('[name="link_on_demo"]').val('').parent().find('label').removeClass('active');
+		$('[name="description"]').val('').html('').parent().find('label').removeClass('active');
+		$('.thumbnail-container .thumb-wrap').each(function(){
+			$(this).find('.remove-uploaded-img').trigger('click');
+		});
+		self.controller.initKeywords();
+
 	}
 }

@@ -19,6 +19,7 @@
 	<script type="text/javascript" src="controller.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </head>
+
 <body class="grey lighten-4">
 
 	<div class="notification-container">
@@ -58,7 +59,7 @@
 			<i class="material-icons">clear</i>
 		</a>
 		<ul class="order-menu adaptive-visible">
-	        <li><a href="#">Featured</a></li>
+	        <li><a class="hide" href="#">Featured</a></li>
 	        <li><a href="#" data-order="visible_counter">Popular</a></li>
 	        <li><a href="#" data-order="id">Latest</a></li>
 	    </ul>
@@ -105,7 +106,7 @@
 		<form method="post">
 			<div class="row">
 				<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-					<div class="form-group">
+					<div class="form-group cms-list-select-wrapper">
 						<label>Select CMS</label>
 						<select name="cms" class="cms-list-select">
 							<!-- <option value="WordPress">WordPress</option> -->
@@ -196,7 +197,7 @@
 			      	<div class="close-search"><i class="material-icons">clear</i></div>
 			      </div>
 			      <ul id="nav-mobile" class="left hide-on-med-and-down">
-			        <li><a href="#">Featured</a></li>
+			        <li><a class="hide" href="#">Featured</a></li>
 			        <li><a href="#" data-order="visible_counter">Popular</a></li>
 			        <li><a href="#" data-order="id">Latest</a></li>
 			      </ul>
