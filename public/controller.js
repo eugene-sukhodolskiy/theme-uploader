@@ -199,12 +199,12 @@ var Controller = function(){
 		self.templateListOnCms(self.currentCmsId, order);
 	}
 
-	this.listingOnSelect = function(url, container){
+	this.listingOnSelect = function(url, container, selected){
 		self.model.get(url, function(data){
-			self.view.listingOnSelectRender(data, container);
+			self.view.listingOnSelectRender(data, container, selected);
 			setTimeout(function(){
 				$('body').click();
-			},100);
+			},150);
 		});
 	}
 
@@ -239,20 +239,20 @@ var Controller = function(){
 		self.view.fixAddMetaPageRender();
 	}
 
-	this.loadMetaForUpdatePage = function(selectedCMS){
+	this.loadMetaForUpdatePage = function(selectedCMS, data){
 		if(self.prevPage == 'uploadTheme'){
 			return false;
 		}
 		console.log('selectedCMS', selectedCMS);
 		self.view.preloaderShow('#addMeta');
-		self.listingOnSelect('meta-resolution/', '.resolution');
-		self.listingOnSelect('meta-browser/', '.compatible-browsers');
-		self.listingOnSelect('meta-file-type/', '.file-type');
-		self.listingOnSelect('meta-columns/', '.column-count');
-		self.listingOnSelect('meta-layout/', '.layout-type');
+		self.listingOnSelect('meta-resolution/', '.resolution', data['template']['meta_resolution']);
+		self.listingOnSelect('meta-browser/', '.compatible-browsers', data['template']['meta_browsers']);
+		self.listingOnSelect('meta-file-type/', '.file-type', data['template']['meta_file_type']);
+		self.listingOnSelect('meta-columns/', '.column-count', data['template']['count_column']);
+		self.listingOnSelect('meta-layout/', '.layout-type', data['template']['meta_layout']);
 
-		self.listingOnSelect('meta-tech/' + selectedCMS, '.compatible-with');
-		self.listingOnSelect('meta-compatible/' + selectedCMS, '.software');
+		self.listingOnSelect('meta-tech/' + selectedCMS, '.compatible-with', data['template']['meta_tech']);
+		self.listingOnSelect('meta-compatible/' + selectedCMS, '.software', data['template']['meta_compatible']);
 
 		self.view.fixAddMetaPageRender();
 	}
@@ -334,7 +334,7 @@ var Controller = function(){
 			if(data.template_name.length > parseInt($('[name="template_name"]').attr('data-minlen'))){
 				if(data.description.length > parseInt($('[name="description"]').attr('data-minlen'))){
 					var counter = 0;
-					// if(typeof selectarr.length == 'undefined') return false;
+					 if(typeof selectarr.length == 'undefined') return false;
 					for(var i=0; i<selectarr.length; i++){
 						if(data[selectarr[i]].length){
 							counter++;
@@ -450,8 +450,8 @@ var Controller = function(){
 			if(typeof data['keys'] == 'string'){
 				data['keys'] = JSON.parse(data['keys']);
 			}
-			self.loadMetaForUpdatePage(data['cms']['meta_value']);
-			self.view.setDataToFormFormUpdate(data['template'], data['keys'], data['thumbnails']);
+			self.loadMetaForUpdatePage(data['cms']['meta_value'], data);
+			self.view.setDataToFormUpdate(data['template'], data['keys'], data['thumbnails']);
 		});
 	}
 
@@ -460,6 +460,7 @@ var Controller = function(){
 			e.preventDefault();
 			var themeId = $(this).attr('href').split('#')[1];
 			self.loadThemeForUpdate(themeId);
+			self.view.clearThumbnails();
 			$('.page').css('display', 'none');
 
 			//special params for update page

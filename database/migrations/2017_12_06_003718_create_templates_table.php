@@ -21,6 +21,8 @@ class CreateTemplatesTable extends Migration
             $table->string('link_on_demo');
             $table->string('name');
             $table->text('meta_browsers');
+            $table->text('meta_resolution');
+            $table->text('meta_compatible');
             $table->text('meta_tech');
             $table->text('meta_file_type');
             $table->integer('count_column');

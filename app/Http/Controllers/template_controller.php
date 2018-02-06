@@ -78,6 +78,8 @@ class template_controller extends Controller
             'meta_browsers' => json_encode($data['compatible-browsers']),
             'meta_tech' => json_encode($data['compatible-with']),
             'meta_file_type' => json_encode($data['file_type']),
+            'meta_resolution' => json_encode($data['resolution']),
+            'meta_compatible' => json_encode($data['software']),
             'count_column' => $data['column'],
             'meta_layout' => $data['layout'],
             'description' => $data['description']

@@ -25,9 +25,8 @@ var View = function(app){
 		$('#' + page).css('display', 'block');
 	}
 
-	// this.selectListLoadingCounter = 0;
-
-	this.listingOnSelectRender = function(data, container){
+	this.listingOnSelectRender = function(data, container, selected){
+		// debugger;
 		var html = '';
 		for(var i=0; i<data.length; i++){
 			if(typeof data[i]['id'] != 'undefined'){
@@ -41,11 +40,31 @@ var View = function(app){
 		// if($(container).attr('multiple') == 'multiple'){
 		// 	$(container).prepend('<option value="defalut" disabled selected>Choose your option</option>');
 		// }
+
 		$(container).material_select('destroy');
-		$(container).html(html);
+		$('select'+container).html(html);
 		$(container).material_select();
-		// select first element
-		$(container).find('li:first-of-type').click();
+
+		if(typeof selected == 'undefined'){
+			// select first element
+			$(container).find('li:first-of-type').click();
+		}else{
+			if(typeof selected == 'string'){
+				selected = JSON.parse(selected);
+			}
+
+			container = 'div' + container;
+			if(typeof selected == 'object'){
+				self.setMaterialSelectData(container, selected);
+			}else if(typeof selected == "number"){
+				$(container).find('option').each(function(i){
+					if($(this).attr('value') == selected){
+						$(container).find('li:eq(' + i + ')').trigger('click');
+						return false;
+					}
+				});
+			}
+		}
 		
 	}
 
@@ -244,7 +263,7 @@ var View = function(app){
 		}
 	}
 
-	this.setDataToFormFormUpdate = function(template, keys, thumbnails){
+	this.setDataToFormUpdate = function(template, keys, thumbnails){
 		$('#template_name').val(template.name).parent().find('label').addClass('active');;
 		$('#description').val(template.description).html(template.description).parent().find('label').addClass('active');
 
@@ -277,9 +296,13 @@ var View = function(app){
 		}, 3000);
 	}
 
-	this.setMaterialSelectData = function(name, arr){
-		var materialSelectId = $('[name="'+name+'"]').attr('data-select-id');
-		var options = $('[name="'+name+'"]').find('option');
+	var arr = [];
+	arr.push({x: 1, y: 2});
+	arr[0].y
+
+	this.setMaterialSelectData = function(container, arr){
+		// debugger;
+		var options = $(container).find('select option');
 		var inx = [];
 		for(var i in arr){
 			for(var n in options){
@@ -290,7 +313,7 @@ var View = function(app){
 		}
 
 		for(var i in inx){
-			$('#'+materialSelectId).find('li:eq(' + inx[i] + ')');
+			$(container).find('li:eq(' + inx[i] + ')').trigger('click');
 		}
 	}
 
@@ -298,10 +321,13 @@ var View = function(app){
 		$('[name="template_name"]').val('').parent().find('label').removeClass('active');
 		$('[name="link_on_demo"]').val('').parent().find('label').removeClass('active');
 		$('[name="description"]').val('').html('').parent().find('label').removeClass('active');
+		self.clearThumbnails();
+		self.controller.initKeywords();
+	}
+
+	this.clearThumbnails = function(){
 		$('.thumbnail-container .thumb-wrap').each(function(){
 			$(this).find('.remove-uploaded-img').trigger('click');
 		});
-		self.controller.initKeywords();
-
 	}
 }
